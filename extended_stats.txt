@@ -1,0 +1,822 @@
+﻿Python 2.7.15 (v2.7.15:ca079a3ea3, Apr 29 2018, 20:59:26) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+=========== RESTART: /Users/johndaciuk/Desktop/mpd.v1/src/stats.py ===========
+
+number of playlists 1000000
+number of tracks 66346428
+number of unique tracks 2262292
+number of unique albums 734684
+number of unique artists 295860
+number of unique titles 92944
+number of playlists with descriptions 18760
+number of unique normalized titles 17381
+avg playlist length 66.346428
+
+top playlist titles
+  10000 country
+  10000 chill
+   8493 rap
+   8481 workout
+   8146 oldies
+   8015 christmas
+   6848 rock
+   6157 party
+   5883 throwback
+   5063 jams
+   5052 worship
+   4907 summer
+   4677 feels
+   4612 new
+   4186 disney
+   4124 lit
+   4030 throwbacks
+   3886 music
+   3513 sleep
+   3500 vibes
+   3465 running
+   3322 edm
+   3260 classic rock
+   3207 classics
+   3144 gym
+   3139 dance
+   3022 road trip
+   2879 pop
+   2875 run
+   2841 car
+   2767 hype
+   2720 old school
+   2659 work
+   2608 random
+   2585 wedding
+   2551 2017
+   2478 hip hop
+   2467 love
+   2280 shower
+   2249 alternative
+   2238 christian
+   2237 reggae
+   2209 relax
+   2167 spanish
+   2134 happy
+   2120 feel good
+   2036 classical
+   2030 summer 2017
+   1998 playlist
+   1996 oldies but goodies
+   1985 2016
+   1980 sad
+   1962 study
+   1934 r&b
+   1921 pregame
+   1896 driving
+   1884 jamz
+   1860 mix
+   1826 my music
+   1826 good vibes
+   1786 roadtrip
+   1756 80s
+   1732 90s
+   1709 mellow
+   1683 <3
+   1662 mood
+   1635 tbt
+   1633 work out
+   1633 jazz
+   1626 drive
+   1620 chillin
+   1595 80's
+   1532 indie
+   1532 classic
+   1514 trap
+   1487 idk
+   1466 halloween
+   1466 summer 2016
+   1438 beach
+   1361 fun
+   1348 90's
+   1340 calm
+   1316 turn up
+   1290 pump up
+   1266 summer 17
+   1260 fall
+   1247 2015
+   1245 acoustic
+   1237 love songs
+   1236 gospel
+   1203 stuff
+   1200 fire
+   1171 good stuff
+   1167 old
+   1159 dubstep
+   1158 slow
+   1155 alt
+   1133 jam
+   1129 musicals
+   1128 chill vibes
+   1121 ❤️
+   1118 litty
+   1104 bangers
+   1094 reggaeton
+   1091 car jams
+   1081 my songs
+   1080 good music
+   1078 good songs
+   1061 summer 2015
+   1056 metal
+   1042 good
+   1018 beats
+   1010 salsa
+    999 soul
+    994 nostalgia
+    993 house
+    984 vibe
+    984 mine
+    980 chill out
+    966 banda
+    964 tb
+    953 instrumental
+    947 slow jams
+    935 the feels
+    927 covers
+    902 yes
+    901 school
+    900 turnt
+    896 new music
+    895 bachata
+    891 🔥🔥🔥
+    888 tunes
+    875 dope
+    874 sad songs
+    859 español
+    854 best
+    841 upbeat
+    835 party playlist
+    834 october
+    834 yoga
+    834 favorite songs
+    828 everything
+    827 me
+    824 jesus
+    815 sex
+    804 electronic
+    799 spring
+    795 new country
+    788 punk
+    785 smooth
+    778 kpop
+    775 2014
+    772 september
+    770 summer 16
+    769 chill music
+    762 mom
+    759 dad
+    759 wedding playlist
+    757 blues
+    757 funk
+    754 soft
+    752 eminem
+    750 fall 2017
+    748 dance party
+    737 old country
+    734 my jams
+    732 spring 2017
+    732 fall 2016
+    730 jammin
+    730 august
+    729 cool
+    715 now
+    712 car rides
+    702 drake
+    699 bops
+    699 morning
+    695 summer '17
+    692 childhood
+    687 homework
+    685 xmas
+    677 christmas music
+    672 summer 2014
+    669 grad party
+    665 april
+    664 bump
+    660 groovy
+    657 car ride
+    652 corridos
+    649 vibin
+    644 party mix
+    643 june
+    639 easy listening
+    635 may
+    632 new stuff
+    626 for you
+    624 wedding songs
+    623 emo
+    622 new new
+    622 july
+    610 other
+    608 march
+    604 🔥🔥
+    600 feelings
+    599 november
+    597 winter
+    595 christian music
+    594 summer vibes
+    591 the good stuff
+    590 groove
+    588 piano
+    586 girl power
+    582 current
+    581 praise
+    580 lol
+    576 dinner
+    574 home
+    571 sunday
+    568 2015 top tracks
+    568 fall 2015
+    566 favorite
+    566 relaxing
+    558 latin
+    557 cocktail hour
+    553 country music
+    550 spring 2016
+    549 folk
+    548 hi
+    546 classic country
+    544 fav songs
+    540 pre game
+    539 guilty pleasures
+    537 broadway
+    537 clean
+    536 my favorites
+    532 summer jams
+    531 studying
+    529 country jams
+    528 2000s
+    519 bangerz
+    514 mixtape
+    509 yeah
+    508 december
+    507 kids
+    506 sunday morning
+    504 hip-hop
+    494 old songs
+    493 the best
+    489 camp
+    487 sleepy
+    485 werk
+
+top tracks
+  46574 HUMBLE. by Kendrick Lamar
+  43447 One Dance by Drake
+  41309 Broccoli (feat. Lil Yachty) by DRAM
+  41079 Closer by The Chainsmokers
+  39987 Congratulations by Post Malone
+  35202 Caroline by Aminé
+  35138 iSpy (feat. Lil Yachty) by KYLE
+  34999 Bad and Boujee (feat. Lil Uzi Vert) by Migos
+  34990 Location by Khalid
+  34922 XO TOUR Llif3 by Lil Uzi Vert
+  33699 Bounce Back by Big Sean
+  32391 Ignition - Remix by R. Kelly
+  32336 No Role Modelz by J. Cole
+  32059 Mask Off by Future
+  31492 No Problem (feat. Lil Wayne & 2 Chainz) by Chance The Rapper
+  31374 I'm the One by DJ Khaled
+  31119 Jumpman by Drake
+  31106 goosebumps by Travis Scott
+  30678 Fake Love by Drake
+  30485 Despacito - Remix by Luis Fonsi
+  30414 Panda by Desiigner
+  30353 Roses by The Chainsmokers
+  30173 Gold Digger by Kanye West
+  30123 Don't Let Me Down by The Chainsmokers
+  29959 Redbone by Childish Gambino
+  29932 Shape of You by Ed Sheeran
+  29204 Trap Queen by Fetty Wap
+  29058 White Iverson by Post Malone
+  29009 The Hills by The Weeknd
+  28448 Riptide by Vance Joy
+  28312 Black Beatles by Rae Sremmurd
+  28308 Starboy by The Weeknd
+  27656 Ni**as In Paris by JAY Z
+  27225 Mr. Brightside by The Killers
+  27088 Lean On (feat. MØ & DJ Snake) by Major Lazer
+  26968 That's What I Like by Bruno Mars
+  26865 Needed Me by Rihanna
+  26734 DNA. by Kendrick Lamar
+  26454 Don't Stop Believin' by Journey
+  26176 1-800-273-8255 by Logic
+  26155 Sorry by Justin Bieber
+  26150 rockstar by Post Malone
+  25967 I Don't Fuck With You by Big Sean
+  25963 679 (feat. Remy Boyz) by Fetty Wap
+  25867 Hotline Bling by Drake
+  25733 Slide by Calvin Harris
+  25455 Unforgettable by French Montana
+  25363 Yeah! by Usher
+  25110 Thinking Out Loud by Ed Sheeran
+  24824 Chill Bill by Rob $tone
+  24682 Can't Feel My Face by The Weeknd
+  24637 Slippery (feat. Gucci Mane) by Migos
+  24557 Bohemian Rhapsody - Remastered 2011 by Queen
+  24541 I Took A Pill In Ibiza - Seeb Remix by Mike Posner
+  24539 Low Life by Future
+  24040 Too Good by Drake
+  23964 Ride by Twenty One Pilots
+  23819 T-Shirt by Migos
+  23720 Never Be Like You by Flume
+  23646 Antidote by Travis Scott
+  23633 Tunnel Vision by Kodak Black
+  23512 V. 3005 by Childish Gambino
+  23503 Me, Myself & I by G-Eazy
+  23465 Work by Rihanna
+  23295 Passionfruit by Drake
+  23253 Cold Water (feat. Justin Bieber & MØ) by Major Lazer
+  23173 It Wasn't Me by Shaggy
+  23070 My House by Flo Rida
+  23050 Stressed Out by Twenty One Pilots
+  23023 Young Dumb & Broke by Khalid
+  22832 Stay (with Alessia Cara) by Zedd
+  22825 This Is What You Came For by Calvin Harris
+  22657 September by Earth, Wind & Fire
+  22600 Don't by Bryson Tiller
+  22506 Body Like A Back Road by Sam Hunt
+  22445 Say You Won't Let Go by James Arthur
+  22233 Uptown Funk by Mark Ronson
+  22207 Love Yourself by Justin Bieber
+  22087 Bank Account by 21 Savage
+  22077 Swang by Rae Sremmurd
+  22062 F**kin' Problems by A$AP Rocky
+  22033 Stronger by Kanye West
+  22029 Sweet Home Alabama by Lynyrd Skynyrd
+  21930 Radioactive by Imagine Dragons
+  21849 Shut Up and Dance by WALK THE MOON
+  21836 Cheap Thrills by Sia
+  21726 Hey Ya! - Radio Mix / Club Mix by OutKast
+  21604 CAN'T STOP THE FEELING! (Original Song from DreamWorks Animation's "TROLLS") by Justin Timberlake
+  21308 No Hands (feat. Roscoe Dash and Wale) - Explicit Album Version by Waka Flocka Flame
+  21094 X (feat. Future) by 21 Savage
+  21012 Drowning (feat. Kodak Black) by A Boogie Wit da Hoodie
+  20970 m.A.A.d city by Kendrick Lamar
+  20961 Something Just Like This by The Chainsmokers
+  20925 Gold by Kiiara
+  20904 What Do You Mean? by Justin Bieber
+  20738 Controlla by Drake
+  20665 Middle by DJ Snake
+  20608 Money Longer by Lil Uzi Vert
+  20590 Party In The U.S.A. by Miley Cyrus
+  20481 It Ain't Me (with Selena Gomez) by Kygo
+  20460 Lose Yourself - Soundtrack Version by Eminem
+  20369 Come Get Her by Rae Sremmurd
+  20202 Heathens by Twenty One Pilots
+  20080 Brown Eyed Girl by Van Morrison
+  20005 Let Me Love You by DJ Snake
+  19996 pick up the phone by Young Thug
+  19918 Take Me To Church by Hozier
+  19901 Wet Dreamz by J. Cole
+  19871 You Was Right by Lil Uzi Vert
+  19806 Ophelia by The Lumineers
+  19771 Hotel California - Remastered by Eagles
+  19708 Work from Home by Fifth Harmony
+  19688 Let It Go by James Bay
+  19617 Where Are Ü Now (with Justin Bieber) by Jack Ü
+  19586 Believer by Imagine Dragons
+  19582 No Type by Rae Sremmurd
+  19562 Wild Thoughts by DJ Khaled
+  19550 Sweet Child O' Mine by Guns N' Roses
+  19425 i hate u, i love u (feat. olivia o'brien) by gnash
+  19170 Pop Style by Drake
+  19135 Stolen Dance by Milky Chance
+  18984 Santeria by Sublime
+  18875 Butterfly Effect by Travis Scott
+  18765 Thinkin Bout You by Frank Ocean
+  18735 7 Years by Lukas Graham
+  18716 Exchange by Bryson Tiller
+  18693 All of Me by John Legend
+  18600 I'm Yours by Jason Mraz
+  18583 Cheerleader - Felix Jaehn Remix Radio Edit by OMI
+  18582 Ain't No Mountain High Enough by Marvin Gaye
+  18461 Buy U a Drank (Shawty Snappin') by T-Pain
+  18418 She Will Be Loved - Radio Mix by Maroon 5
+  18354 Come On Eileen by Dexys Midnight Runners
+  18342 Famous by Kanye West
+  18321 Let Her Go by Passenger
+  18315 Go Flex by Post Malone
+  18298 'Till I Collapse by Eminem
+  18275 oui by Jeremih
+  18259 IV. sweatpants by Childish Gambino
+  18250 Young, Wild & Free (feat. Bruno Mars) - feat. Bruno Mars by Snoop Dogg
+  18115 LOVE. FEAT. ZACARI. by Kendrick Lamar
+  18094 All Time Low by Jon Bellion
+  18067 Magnolia by Playboi Carti
+  18033 Back To Back by Drake
+  18009 Wonderwall - Remastered by Oasis
+  17997 In the Name of Love by Martin Garrix
+  17996 Photograph by Ed Sheeran
+  17995 In Da Club by 50 Cent
+  17993 Can't Hold Us - feat. Ray Dalton by Macklemore & Ryan Lewis
+  17911 Earned It (Fifty Shades Of Grey) by The Weeknd
+  17881 Stay With Me by Sam Smith
+  17851 Portland by Drake
+  17757 Get Low - Street by Lil Jon & The East Side Boyz
+  17755 Hips Don't Lie by Shakira
+  17703 Midnight City by M83
+  17681 Bodak Yellow by Cardi B
+  17576 Sweater Weather by The Neighbourhood
+  17508 24K Magic by Bruno Mars
+  17465 Only by Nicki Minaj
+  17454 Hello by Adele
+  17452 Drops of Jupiter by Train
+  17396 Promiscuous by Nelly Furtado
+  17361 All The Small Things by blink-182
+  17329 Pumped Up Kicks by Foster The People
+  17317 My Girl by The Temptations
+  17266 Feel It Still by Portugal. The Man
+  17245 Piano Man by Billy Joel
+  17226 Swimming Pools (Drank) by Kendrick Lamar
+  17219 Starving by Hailee Steinfeld
+  17218 Rolex by Ayo & Teo
+  17197 Often by The Weeknd
+  17196 Counting Stars by OneRepublic
+  17170 Cake By The Ocean by DNCE
+  17170 Stitches by Shawn Mendes
+  17140 Electric Love by BØRNS
+  17131 Hollaback Girl by Gwen Stefani
+  17097 Ho Hey by The Lumineers
+  17041 Issues by Julia Michaels
+  16945 Crazy In Love by Beyoncé
+  16883 Sugar by Maroon 5
+  16863 Flex (Ooh, Ooh, Ooh) by Rich Homie Quan
+  16838 Die A Happy Man by Thomas Rhett
+  16828 Hey There Delilah by Plain White T's
+  16791 Latch by Disclosure
+  16785 G.O.M.D. by J. Cole
+  16781 Bitch Better Have My Money by Rihanna
+  16749 Home by Edward Sharpe & The Magnetic Zeros
+  16735 HeadBand (feat. 2 Chainz) by B.o.B
+  16680 Planez by Jeremih
+  16608 Do I Wanna Know? by Arctic Monkeys
+  16592 2 Phones by Kevin Gates
+  16592 Chasing Cars by Snow Patrol
+  16586 Father Stretch My Hands Pt. 1 by Kanye West
+  16485 Wake Me Up - Radio Edit by Avicii
+  16471 Sugar, We're Goin Down by Fall Out Boy
+  16468 One Night by Lil Yachty
+  16460 Pompeii by Bastille
+  16400 Energy by Drake
+  16395 All Night (feat. Knox Fortune) by Chance The Rapper
+  16366 Low (feat T-Pain) - Feat T-Pain Album Version by Flo Rida
+  16352 This Could Be Us by Rae Sremmurd
+  16333 Paris by The Chainsmokers
+  16316 How to Save a Life by The Fray
+  16280 Light It Up (feat. Nyla & Fuse ODG) - Remix by Major Lazer
+  16276 Forever by Drake
+  16248 What They Want by Russ
+  16236 Jessie's Girl by Rick Springfield
+  16209 All Star by Smash Mouth
+  16154 Waves by Kanye West
+  16107 Under The Bridge by Red Hot Chili Peppers
+  16106 PILLOWTALK by ZAYN
+  16104 Livin' On A Prayer by Bon Jovi
+  16089 Demons by Imagine Dragons
+  16048 POWER by Kanye West
+  16037 I Want You Back by The Jackson 5
+  16023 Breezeblocks by alt-J
+  16009 I Feel It Coming by The Weeknd
+  15926 Really Really by Kevin Gates
+  15921 I Don’t Wanna Live Forever (Fifty Shades Darker) - From "Fifty Shades Darker (Original Motion Picture Soundtrack)" by ZAYN
+  15914 Rather Be (feat. Jess Glynne) by Clean Bandit
+  15907 Side To Side by Ariana Grande
+  15847 F*ck Up Some Commas by Future
+  15828 Budapest by George Ezra
+  15826 Smells Like Teen Spirit by Nirvana
+  15794 Strip That Down by Liam Payne
+  15761 GDFR (feat. Sage The Gemini & Lookas) by Flo Rida
+  15757 The Motto by Drake
+  15732 7/11 by Beyoncé
+  15720 Sweet Caroline by Neil Diamond
+  15695 Skinny Love by Bon Iver
+  15677 Have You Ever Seen The Rain? by Creedence Clearwater Revival
+  15660 Africa by Toto
+  15652 All My Friends by Snakehips
+  15618 Chicken Fried by Zac Brown Band
+  15601 Halo by Beyoncé
+  15587 SexyBack by Justin Timberlake
+  15587 Little Talks by Of Monsters and Men
+  15581 0 To 100 / The Catch Up by Drake
+  15572 See You Again (feat. Charlie Puth) - From "Furious 7" by Wiz Khalifa
+  15561 No Scrubs by TLC
+  15550 You Make My Dreams - Remastered by Daryl Hall & John Oates
+  15524 Kiss Me Thru The Phone by Soulja Boy
+  15510 House Party by Sam Hunt
+  15502 I Write Sins Not Tragedies by Panic! At The Disco
+  15501 6 Foot 7 Foot by Lil Wayne
+  15487 Electric Feel by MGMT
+  15353 Thunder by Imagine Dragons
+  15348 Again by Fetty Wap
+  15298 Sunday Candy by Donnie Trumpet & The Social Experiment
+  15281 Bitch, Don’t Kill My Vibe by Kendrick Lamar
+
+top artists
+ 847160 Drake
+ 413297 Kanye West
+ 353624 Kendrick Lamar
+ 339570 Rihanna
+ 316603 The Weeknd
+ 294667 Eminem
+ 272116 Ed Sheeran
+ 250734 Future
+ 243119 Justin Bieber
+ 241560 J. Cole
+ 230857 Beyoncé
+ 223509 The Chainsmokers
+ 212772 Chris Brown
+ 203047 Calvin Harris
+ 198905 Twenty One Pilots
+ 197855 Lil Uzi Vert
+ 195907 Post Malone
+ 192478 Big Sean
+ 187029 Maroon 5
+ 185520 JAY Z
+ 184440 Migos
+ 182350 Coldplay
+ 179776 G-Eazy
+ 176657 Lil Wayne
+ 168351 Rae Sremmurd
+ 167940 Imagine Dragons
+ 162464 Bruno Mars
+ 159872 Childish Gambino
+ 152655 Nicki Minaj
+ 146260 Luke Bryan
+ 145689 Wiz Khalifa
+ 142767 Fall Out Boy
+ 142115 Ariana Grande
+ 141505 Usher
+ 140309 Logic
+ 139947 John Mayer
+ 139928 Travis Scott
+ 139554 One Direction
+ 137960 Chance The Rapper
+ 137523 DJ Khaled
+ 136328 Panic! At The Disco
+ 135666 Florida Georgia Line
+ 131091 Red Hot Chili Peppers
+ 129902 The Beatles
+ 128866 Katy Perry
+ 128196 Fetty Wap
+ 126733 Khalid
+ 126658 Miley Cyrus
+ 126353 Major Lazer
+ 124734 Jason Derulo
+ 123824 Zac Brown Band
+ 123178 A$AP Rocky
+ 122188 Frank Ocean
+ 121270 Justin Timberlake
+ 120288 Flo Rida
+ 119351 Kodak Black
+ 118953 Lana Del Rey
+ 117751 Queen
+ 117250 Young Thug
+ 116743 Kid Cudi
+ 116439 Michael Jackson
+ 112558 The Lumineers
+ 110201 David Guetta
+ 109299 Adele
+ 108792 Shawn Mendes
+ 106917 Sam Hunt
+ 106047 OneRepublic
+ 105366 Taylor Swift
+ 103416 Gucci Mane
+ 103076 21 Savage
+ 102627 Michael Bublé
+ 102514 Jeremih
+ 102303 Mumford & Sons
+ 101850 Halsey
+ 101531 Thomas Rhett
+ 101422 Flume
+ 100804 2 Chainz
+ 100698 Pitbull
+ 100334 Sam Smith
+  99625 Kenny Chesney
+  98241 blink-182
+  97604 Kygo
+  96827 Selena Gomez
+  96389 Kevin Gates
+  96253 Tim McGraw
+  95503 The Rolling Stones
+  94963 Bryson Tiller
+  94911 Sia
+  94552 Trey Songz
+  94350 Russ
+  91578 Jack Johnson
+  91257 Avicii
+  90959 blackbear
+  90945 Blake Shelton
+  90543 Jason Aldean
+  89877 Demi Lovato
+  88883 Lorde
+  88500 Zedd
+  88046 Britney Spears
+  87981 Arctic Monkeys
+  87350 Meek Mill
+  87141 DJ Snake
+  86745 Led Zeppelin
+  86657 Lady Gaga
+  86515 Green Day
+  86272 2Pac
+  86116 Linkin Park
+  85857 Hozier
+  85696 Mac Miller
+  84563 The 1975
+  84353 Ellie Goulding
+  84106 ScHoolboy Q
+  82813 Hillsong United
+  82547 Frank Sinatra
+  81685 The Killers
+  81473 Bob Marley & The Wailers
+  81106 Nelly
+  80358 The Notorious B.I.G.
+  79915 50 Cent
+  79882 Billy Joel
+  78785 Kesha
+  78216 Pentatonix
+  77380 B.o.B
+  76956 Elton John
+  76780 OutKast
+  76409 Snoop Dogg
+  75902 Vance Joy
+  75771 Mariah Carey
+  75570 Eric Church
+  75364 Ty Dolla $ign
+  75141 Creedence Clearwater Revival
+  74689 Fleetwood Mac
+  74591 R. Kelly
+  74035 Keith Urban
+  73634 French Montana
+  73515 T.I.
+  73216 T-Pain
+  72741 Cage The Elephant
+  70824 AC/DC
+  70680 Train
+  70602 Sublime
+  70394 ODESZA
+  70220 Nirvana
+  69598 alt-J
+  69543 Shakira
+  69419 Bon Iver
+  69246 Macklemore & Ryan Lewis
+  68714 Fifth Harmony
+  68598 Guns N' Roses
+  67893 Rascal Flatts
+  67755 Martin Garrix
+  67526 Weezer
+  67459 Tyga
+  67177 The Black Eyed Peas
+  66815 Kid Ink
+  66546 Disclosure
+  66277 Journey
+  65652 Dierks Bentley
+  64407 Stevie Wonder
+  63854 Eagles
+  63810 Carrie Underwood
+  62846 A Boogie Wit da Hoodie
+  62629 John Legend
+  62283 Lynyrd Skynyrd
+  61890 Kelly Clarkson
+  61728 Hillsong Worship
+  61558 Daft Punk
+  61521 Brad Paisley
+  61404 Jason Mraz
+  61338 ZAYN
+  60826 Ne-Yo
+  60487 Metallica
+  60321 DRAM
+  60220 P!nk
+  60156 Aerosmith
+  60132 Marvin Gaye
+  60067 Jon Bellion
+  59865 KYLE
+  59732 Pink Floyd
+  59680 Paramore
+  59657 The Black Keys
+  59638 George Strait
+  59394 Florence + The Machine
+  58995 Miguel
+  58958 XXXTENTACION
+  58676 Meghan Trainor
+  58437 Bastille
+  57954 A$AP Ferg
+  57551 Of Monsters and Men
+  57460 WALK THE MOON
+  57329 Tyler, The Creator
+  57114 Lil Yachty
+  56448 YG
+  56352 Skrillex
+  56287 The Neighbourhood
+  55982 Foster The People
+  55880 Fergie
+  55835 Akon
+  55827 Galantis
+  55379 Alessia Cara
+  55195 My Chemical Romance
+  55093 The Fray
+  54836 Three Days Grace
+  54774 Tove Lo
+  54556 Johnny Cash
+  54473 Wale
+  53812 J Balvin
+  53793 Enrique Iglesias
+  53714 Dr. Dre
+  53650 The Beach Boys
+  53428 Tiësto
+  53406 Desiigner
+  53272 Charlie Puth
+  53250 Destiny's Child
+  52869 The Head and the Heart
+  52428 Kings of Leon
+  52208 Aminé
+  52092 Bon Jovi
+  51761 Glee Cast
+  51302 Avril Lavigne
+  51258 Vampire Weekend
+  51094 James Bay
+  50976 PARTYNEXTDOOR
+  50766 Tame Impala
+  50342 The Script
+  50190 Mike Posner
+  50065 Two Door Cinema Club
+  49876 Yo Gotti
+  49677 Elvis Presley
+  49396 Toby Keith
+  49243 Alicia Keys
+  49061 Chris Tomlin
+  49028 Glass Animals
+  48934 Billy Currington
+  48625 Machine Gun Kelly
+  48528 X Ambassadors
+  48247 The All-American Rejects
+  48136 Troye Sivan
+  47967 Hailee Steinfeld
+  47612 Jake Owen
+  47534 Foo Fighters
+  47155 Ludacris
+  46944 Nickelback
+  46756 Nick Jonas
+  46734 Daryl Hall & John Oates
+  46683 David Bowie
+  46555 Gorillaz
+  46425 Grouplove
+  46201 Melanie Martinez
+  46072 5 Seconds of Summer
+
+numedits histogram
+  92252 2
+  81820 3
+  71973 4
+  61978 5
+  53085 6
+  46860 7
+  41210 8
+  36629 9
+  32810 10
+  29907 11
+  26947 12
+  24941 13
+  22800 14
+  20834 15
+  19000 16
+  17817 17
+  16551 18
+  15305 19
+  14217 20
+  13486 21
+
+last modified histogram
+  19018 2017-10-30
+  15495 2017-10-29
+  11640 2017-10-26
+  11083 2017-10-28
+   9994 2017-10-27
+   9727 2017-10-25
+   9142 2017-10-24
+   8588 2017-10-23
+   7953 2017-10-22
+   6980 2017-10-19
+   6407 2017-10-21
+   5986 2017-10-18
+   5979 2017-10-20
+   5792 2017-10-17
+   5653 2017-10-16
+   5375 2017-10-15
+   4840 2017-10-12
+   4483 2017-10-14
+   4460 2017-10-11
+   4431 2017-10-13
+
+playlist length histogram
+Counter({20: 15057, 15: 14177, 21: 13876, 16: 13856, 17: 13685, 18: 13629, 22: 13602, 19: 13531, 24: 13250, 23: 13149, 30: 13077, 14: 13043, 25: 13031, 26: 12834, 28: 12513, 27: 12502, 29: 12332, 13: 12318, 12: 12016, 31: 11882, 32: 11802, 33: 11627, 34: 11377, 35: 11174, 40: 10980, 36: 10909, 11: 10757, 10: 10667, 37: 10553, 38: 10455, 39: 10268, 42: 10068, 41: 9888, 43: 9770, 44: 9555, 45: 9287, 46: 9005, 9: 9003, 50: 8897, 47: 8843, 48: 8694, 49: 8502, 51: 8303, 8: 8189, 52: 8045, 53: 7972, 54: 7860, 55: 7671, 56: 7445, 57: 7264, 59: 7201, 7: 7169, 58: 7122, 60: 7008, 61: 6800, 62: 6733, 63: 6594, 64: 6448, 65: 6351, 6: 6234, 66: 6179, 67: 6007, 69: 5840, 68: 5808, 70: 5782, 71: 5701, 72: 5547, 5: 5413, 74: 5313, 73: 5283, 75: 5251, 76: 5014, 77: 5000, 78: 4888, 81: 4856, 80: 4822, 79: 4737, 82: 4627, 83: 4578, 84: 4537, 100: 4467, 85: 4388, 86: 4306, 87: 4202, 90: 4049, 88: 4001, 89: 3936, 91: 3932, 93: 3836, 92: 3819, 95: 3781, 94: 3729, 101: 3615, 96: 3557, 99: 3508, 98: 3504, 102: 3504, 97: 3470, 103: 3407, 105: 3272, 104: 3258, 106: 3161, 108: 3125, 107: 3000, 109: 2983, 110: 2972, 113: 2934, 111: 2933, 112: 2854, 116: 2700, 117: 2673, 114: 2640, 118: 2619, 119: 2619, 115: 2604, 121: 2578, 122: 2480, 120: 2479, 123: 2465, 124: 2395, 127: 2372, 126: 2357, 125: 2321, 128: 2225, 130: 2220, 131: 2184, 129: 2113, 132: 2112, 136: 2080, 133: 2065, 135: 2064, 134: 2053, 138: 1997, 137: 1984, 140: 1937, 141: 1905, 142: 1898, 139: 1883, 143: 1803, 145: 1768, 144: 1761, 148: 1735, 150: 1729, 149: 1722, 151: 1715, 146: 1702, 147: 1694, 154: 1621, 155: 1587, 152: 1577, 153: 1572, 156: 1570, 160: 1511, 157: 1510, 158: 1473, 159: 1473, 161: 1437, 162: 1417, 165: 1406, 164: 1400, 163: 1397, 167: 1362, 168: 1357, 170: 1346, 166: 1326, 171: 1306, 169: 1291, 172: 1258, 173: 1245, 174: 1244, 175: 1235, 179: 1209, 178: 1201, 177: 1190, 176: 1176, 181: 1163, 180: 1137, 182: 1137, 183: 1133, 184: 1098, 185: 1058, 186: 1036, 192: 1034, 188: 1017, 187: 1014, 190: 994, 189: 986, 191: 981, 200: 978, 193: 963, 194: 947, 199: 941, 196: 932, 203: 927, 202: 919, 201: 915, 197: 911, 195: 899, 204: 870, 206: 869, 207: 861, 209: 860, 205: 858, 210: 858, 198: 840, 211: 840, 208: 833, 214: 803, 213: 795, 217: 791, 212: 789, 215: 784, 220: 737, 222: 733, 216: 730, 223: 713, 218: 711, 227: 710, 221: 702, 219: 700, 228: 688, 224: 678, 230: 675, 229: 659, 225: 655, 231: 639, 232: 631, 233: 630, 226: 621, 235: 608, 236: 608, 238: 599, 234: 594, 241: 588, 237: 583, 239: 569, 240: 530, 243: 514, 242: 503, 245: 485, 246: 457, 244: 448, 248: 447, 247: 442, 249: 384, 250: 373, 376: 1})
+
+num followers histogram
+Counter({1: 754219, 2: 149600, 3: 46939, 4: 19591, 5: 9813, 6: 5360, 7: 3305, 8: 2143, 9: 1512, 10: 1006, 11: 825, 12: 632, 13: 479, 14: 359, 15: 328, 16: 290, 17: 235, 18: 207, 19: 162, 20: 138, 22: 126, 21: 117, 23: 106, 24: 95, 27: 74, 29: 71, 26: 70, 28: 70, 25: 66, 36: 66, 31: 64, 32: 60, 30: 50, 34: 49, 33: 46, 38: 44, 43: 38, 35: 34, 39: 34, 40: 34, 37: 27, 44: 27, 41: 26, 42: 26, 47: 26, 55: 26, 45: 25, 48: 24, 49: 23, 70: 21, 52: 20, 51: 19, 54: 19, 58: 19, 46: 18, 50: 18, 53: 16, 59: 15, 56: 14, 65: 14, 61: 12, 78: 12, 90: 12, 57: 11, 62: 11, 63: 11, 74: 11, 82: 11, 88: 11, 95: 11, 64: 10, 81: 10, 87: 10, 66: 9, 72: 9, 80: 9, 83: 9, 92: 9, 104: 9, 67: 8, 76: 8, 77: 8, 113: 8, 116: 8, 75: 7, 86: 7, 112: 7, 114: 7, 124: 7, 71: 6, 79: 6, 84: 6, 93: 6, 96: 6, 100: 6, 107: 6, 111: 6, 134: 6, 143: 6, 174: 6, 60: 5, 73: 5, 85: 5, 91: 5, 101: 5, 108: 5, 122: 5, 125: 5, 68: 4, 69: 4, 94: 4, 105: 4, 109: 4, 115: 4, 117: 4, 123: 4, 128: 4, 130: 4, 132: 4, 135: 4, 141: 4, 154: 4, 162: 4, 175: 4, 186: 4, 195: 4, 422: 4, 106: 4, 97: 3, 98: 3, 102: 3, 103: 3, 118: 3, 119: 3, 127: 3, 129: 3, 139: 3, 142: 3, 148: 3, 149: 3, 152: 3, 158: 3, 159: 3, 163: 3, 167: 3, 169: 3, 172: 3, 180: 3, 181: 3, 183: 3, 184: 3, 192: 3, 205: 3, 227: 3, 230: 3, 232: 3, 235: 3, 239: 3, 251: 3, 256: 3, 261: 3, 269: 3, 271: 3, 272: 3, 283: 3, 293: 3, 305: 3, 380: 3, 450: 3, 455: 3, 464: 3, 525: 3, 535: 3, 597: 3, 89: 2, 99: 2, 110: 2, 120: 2, 121: 2, 131: 2, 137: 2, 145: 2, 147: 2, 151: 2, 153: 2, 155: 2, 160: 2, 161: 2, 166: 2, 171: 2, 173: 2, 179: 2, 187: 2, 194: 2, 197: 2, 198: 2, 200: 2, 203: 2, 214: 2, 215: 2, 216: 2, 217: 2, 220: 2, 223: 2, 240: 2, 241: 2, 243: 2, 244: 2, 253: 2, 259: 2, 260: 2, 273: 2, 274: 2, 279: 2, 282: 2, 285: 2, 287: 2, 290: 2, 292: 2, 294: 2, 295: 2, 297: 2, 302: 2, 304: 2, 307: 2, 314: 2, 339: 2, 352: 2, 371: 2, 378: 2, 390: 2, 412: 2, 414: 2, 430: 2, 2490: 2, 448: 2, 2467: 2, 486: 2, 503: 2, 515: 2, 576: 2, 587: 2, 602: 2, 653: 2, 702: 2, 802: 2, 1038: 2, 1040: 2, 1209: 2, 1444: 2, 1644: 2, 1994: 2, 4202: 1, 126: 1, 133: 1, 136: 1, 138: 1, 144: 1, 146: 1, 156: 1, 157: 1, 4097: 1, 165: 1, 2216: 1, 176: 1, 177: 1, 178: 1, 6326: 1, 185: 1, 190: 1, 191: 1, 193: 1, 196: 1, 202: 1, 206: 1, 207: 1, 208: 1, 2259: 1, 212: 1, 213: 1, 218: 1, 221: 1, 222: 1, 224: 1, 225: 1, 229: 1, 234: 1, 236: 1, 2286: 1, 242: 1, 245: 1, 248: 1, 249: 1, 250: 1, 252: 1, 6398: 1, 255: 1, 257: 1, 264: 1, 267: 1, 268: 1, 2323: 1, 276: 1, 277: 1, 280: 1, 284: 1, 286: 1, 288: 1, 296: 1, 298: 1, 299: 1, 300: 1, 301: 1, 309: 1, 312: 1, 313: 1, 315: 1, 12604: 1, 319: 1, 322: 1, 327: 1, 329: 1, 330: 1, 4427: 1, 332: 1, 333: 1, 336: 1, 338: 1, 340: 1, 342: 1, 344: 1, 348: 1, 349: 1, 2398: 1, 353: 1, 355: 1, 357: 1, 358: 1, 4455: 1, 361: 1, 362: 1, 364: 1, 367: 1, 369: 1, 372: 1, 373: 1, 374: 1, 375: 1, 376: 1, 404: 1, 381: 1, 388: 1, 396: 1, 398: 1, 401: 1, 8596: 1, 409: 1, 410: 1, 413: 1, 418: 1, 419: 1, 2471: 1, 6568: 1, 429: 1, 437: 1, 439: 1, 440: 1, 441: 1, 443: 1, 444: 1, 445: 1, 424: 1, 457: 1, 458: 1, 460: 1, 461: 1, 2510: 1, 463: 1, 466: 1, 469: 1, 474: 1, 14812: 1, 480: 1, 483: 1, 485: 1, 492: 1, 495: 1, 2545: 1, 501: 1, 507: 1, 508: 1, 1450: 1, 521: 1, 523: 1, 527: 1, 537: 1, 542: 1, 2593: 1, 552: 1, 554: 1, 2141: 1, 4657: 1, 568: 1, 2618: 1, 571: 1, 574: 1, 586: 1, 591: 1, 599: 1, 603: 1, 604: 1, 610: 1, 2671: 1, 626: 1, 629: 1, 636: 1, 638: 1, 639: 1, 642: 1, 648: 1, 651: 1, 656: 1, 2719: 1, 674: 1, 675: 1, 681: 1, 682: 1, 690: 1, 692: 1, 698: 1, 703: 1, 708: 1, 712: 1, 714: 1, 2509: 1, 722: 1, 729: 1, 732: 1, 741: 1, 742: 1, 6611: 1, 758: 1, 765: 1, 766: 1, 767: 1, 770: 1, 6918: 1, 778: 1, 779: 1, 15123: 1, 792: 1, 2182: 1, 476: 1, 812: 1, 31539: 1, 821: 1, 823: 1, 824: 1, 2186: 1, 833: 1, 836: 1, 837: 1, 839: 1, 843: 1, 844: 1, 848: 1, 2074: 1, 4238: 1, 858: 1, 864: 1, 867: 1, 11111: 1, 877: 1, 880: 1, 45942: 1, 898: 1, 899: 1, 908: 1, 914: 1, 915: 1, 2971: 1, 924: 1, 5021: 1, 927: 1, 929: 1, 2981: 1, 936: 1, 2887: 1, 2994: 1, 947: 1, 9142: 1, 3000: 1, 955: 1, 1525: 1, 960: 1, 972: 1, 973: 1, 979: 1, 987: 1, 992: 1, 9188: 1, 1011: 1, 1012: 1, 1013: 1, 7177: 1, 1041: 1, 1053: 1, 1061: 1, 5164: 1, 3117: 1, 1071: 1, 3136: 1, 3165: 1, 5219: 1, 3182: 1, 1139: 1, 1142: 1, 1148: 1, 3197: 1, 1150: 1, 9345: 1, 6337: 1, 2245: 1, 5282: 1, 1187: 1, 1199: 1, 27830: 1, 1208: 1, 3266: 1, 1220: 1, 2122: 1, 3286: 1, 1241: 1, 1242: 1, 1247: 1, 1248: 1, 7394: 1, 1251: 1, 211: 1, 1268: 1, 2088: 1, 1280: 1, 1283: 1, 1286: 1, 1303: 1, 1308: 1, 1311: 1, 1360: 1, 4323: 1, 11618: 1, 3437: 1, 12862: 1, 1401: 1, 1403: 1, 1413: 1, 238: 1, 1439: 1, 3498: 1, 3512: 1, 1470: 1, 1472: 1, 1474: 1, 1483: 1, 1497: 1, 11745: 1, 15842: 1, 254: 1, 1527: 1, 11772: 1, 3596: 1, 1559: 1, 1561: 1, 946: 1, 1585: 1, 1589: 1, 3638: 1, 1612: 1, 2658: 1, 53519: 1, 1621: 1, 22102: 1, 1624: 1, 1627: 1, 9821: 1, 1640: 1, 2322: 1, 1651: 1, 6421: 1, 1669: 1, 3738: 1, 5787: 1, 9887: 1, 5822: 1, 1731: 1, 23500: 1, 1744: 1, 2341: 1, 2342: 1, 7912: 1, 1781: 1, 1806: 1, 1810: 1, 1813: 1, 1817: 1, 1823: 1, 7973: 1, 1858: 1, 2699: 1, 3934: 1, 1916: 1, 1975: 1, 10911: 1, 1980: 1, 1995: 1, 2002: 1, 2004: 1, 2008: 1, 71643: 1, 2016: 1, 1363: 1})
+>>> 

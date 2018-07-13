@@ -1,0 +1,250 @@
+ 847160 Drake
+ 413297 Kanye West
+ 353624 Kendrick Lamar
+ 339570 Rihanna
+ 316603 The Weeknd
+ 294667 Eminem
+ 272116 Ed Sheeran
+ 250734 Future
+ 243119 Justin Bieber
+ 241560 J. Cole
+ 230857 Beyoncé
+ 223509 The Chainsmokers
+ 212772 Chris Brown
+ 203047 Calvin Harris
+ 198905 Twenty One Pilots
+ 197855 Lil Uzi Vert
+ 195907 Post Malone
+ 192478 Big Sean
+ 187029 Maroon 5
+ 185520 JAY Z
+ 184440 Migos
+ 182350 Coldplay
+ 179776 G-Eazy
+ 176657 Lil Wayne
+ 168351 Rae Sremmurd
+ 167940 Imagine Dragons
+ 162464 Bruno Mars
+ 159872 Childish Gambino
+ 152655 Nicki Minaj
+ 146260 Luke Bryan
+ 145689 Wiz Khalifa
+ 142767 Fall Out Boy
+ 142115 Ariana Grande
+ 141505 Usher
+ 140309 Logic
+ 139947 John Mayer
+ 139928 Travis Scott
+ 139554 One Direction
+ 137960 Chance The Rapper
+ 137523 DJ Khaled
+ 136328 Panic! At The Disco
+ 135666 Florida Georgia Line
+ 131091 Red Hot Chili Peppers
+ 129902 The Beatles
+ 128866 Katy Perry
+ 128196 Fetty Wap
+ 126733 Khalid
+ 126658 Miley Cyrus
+ 126353 Major Lazer
+ 124734 Jason Derulo
+ 123824 Zac Brown Band
+ 123178 A$AP Rocky
+ 122188 Frank Ocean
+ 121270 Justin Timberlake
+ 120288 Flo Rida
+ 119351 Kodak Black
+ 118953 Lana Del Rey
+ 117751 Queen
+ 117250 Young Thug
+ 116743 Kid Cudi
+ 116439 Michael Jackson
+ 112558 The Lumineers
+ 110201 David Guetta
+ 109299 Adele
+ 108792 Shawn Mendes
+ 106917 Sam Hunt
+ 106047 OneRepublic
+ 105366 Taylor Swift
+ 103416 Gucci Mane
+ 103076 21 Savage
+ 102627 Michael Bublé
+ 102514 Jeremih
+ 102303 Mumford & Sons
+ 101850 Halsey
+ 101531 Thomas Rhett
+ 101422 Flume
+ 100804 2 Chainz
+ 100698 Pitbull
+ 100334 Sam Smith
+  99625 Kenny Chesney
+  98241 blink-182
+  97604 Kygo
+  96827 Selena Gomez
+  96389 Kevin Gates
+  96253 Tim McGraw
+  95503 The Rolling Stones
+  94963 Bryson Tiller
+  94911 Sia
+  94552 Trey Songz
+  94350 Russ
+  91578 Jack Johnson
+  91257 Avicii
+  90959 blackbear
+  90945 Blake Shelton
+  90543 Jason Aldean
+  89877 Demi Lovato
+  88883 Lorde
+  88500 Zedd
+  88046 Britney Spears
+  87981 Arctic Monkeys
+  87350 Meek Mill
+  87141 DJ Snake
+  86745 Led Zeppelin
+  86657 Lady Gaga
+  86515 Green Day
+  86272 2Pac
+  86116 Linkin Park
+  85857 Hozier
+  85696 Mac Miller
+  84563 The 1975
+  84353 Ellie Goulding
+  84106 ScHoolboy Q
+  82813 Hillsong United
+  82547 Frank Sinatra
+  81685 The Killers
+  81473 Bob Marley & The Wailers
+  81106 Nelly
+  80358 The Notorious B.I.G.
+  79915 50 Cent
+  79882 Billy Joel
+  78785 Kesha
+  78216 Pentatonix
+  77380 B.o.B
+  76956 Elton John
+  76780 OutKast
+  76409 Snoop Dogg
+  75902 Vance Joy
+  75771 Mariah Carey
+  75570 Eric Church
+  75364 Ty Dolla $ign
+  75141 Creedence Clearwater Revival
+  74689 Fleetwood Mac
+  74591 R. Kelly
+  74035 Keith Urban
+  73634 French Montana
+  73515 T.I.
+  73216 T-Pain
+  72741 Cage The Elephant
+  70824 AC/DC
+  70680 Train
+  70602 Sublime
+  70394 ODESZA
+  70220 Nirvana
+  69598 alt-J
+  69543 Shakira
+  69419 Bon Iver
+  69246 Macklemore & Ryan Lewis
+  68714 Fifth Harmony
+  68598 Guns N' Roses
+  67893 Rascal Flatts
+  67755 Martin Garrix
+  67526 Weezer
+  67459 Tyga
+  67177 The Black Eyed Peas
+  66815 Kid Ink
+  66546 Disclosure
+  66277 Journey
+  65652 Dierks Bentley
+  64407 Stevie Wonder
+  63854 Eagles
+  63810 Carrie Underwood
+  62846 A Boogie Wit da Hoodie
+  62629 John Legend
+  62283 Lynyrd Skynyrd
+  61890 Kelly Clarkson
+  61728 Hillsong Worship
+  61558 Daft Punk
+  61521 Brad Paisley
+  61404 Jason Mraz
+  61338 ZAYN
+  60826 Ne-Yo
+  60487 Metallica
+  60321 DRAM
+  60220 P!nk
+  60156 Aerosmith
+  60132 Marvin Gaye
+  60067 Jon Bellion
+  59865 KYLE
+  59732 Pink Floyd
+  59680 Paramore
+  59657 The Black Keys
+  59638 George Strait
+  59394 Florence + The Machine
+  58995 Miguel
+  58958 XXXTENTACION
+  58676 Meghan Trainor
+  58437 Bastille
+  57954 A$AP Ferg
+  57551 Of Monsters and Men
+  57460 WALK THE MOON
+  57329 Tyler, The Creator
+  57114 Lil Yachty
+  56448 YG
+  56352 Skrillex
+  56287 The Neighbourhood
+  55982 Foster The People
+  55880 Fergie
+  55835 Akon
+  55827 Galantis
+  55379 Alessia Cara
+  55195 My Chemical Romance
+  55093 The Fray
+  54836 Three Days Grace
+  54774 Tove Lo
+  54556 Johnny Cash
+  54473 Wale
+  53812 J Balvin
+  53793 Enrique Iglesias
+  53714 Dr. Dre
+  53650 The Beach Boys
+  53428 Tiësto
+  53406 Desiigner
+  53272 Charlie Puth
+  53250 Destiny's Child
+  52869 The Head and the Heart
+  52428 Kings of Leon
+  52208 Aminé
+  52092 Bon Jovi
+  51761 Glee Cast
+  51302 Avril Lavigne
+  51258 Vampire Weekend
+  51094 James Bay
+  50976 PARTYNEXTDOOR
+  50766 Tame Impala
+  50342 The Script
+  50190 Mike Posner
+  50065 Two Door Cinema Club
+  49876 Yo Gotti
+  49677 Elvis Presley
+  49396 Toby Keith
+  49243 Alicia Keys
+  49061 Chris Tomlin
+  49028 Glass Animals
+  48934 Billy Currington
+  48625 Machine Gun Kelly
+  48528 X Ambassadors
+  48247 The All-American Rejects
+  48136 Troye Sivan
+  47967 Hailee Steinfeld
+  47612 Jake Owen
+  47534 Foo Fighters
+  47155 Ludacris
+  46944 Nickelback
+  46756 Nick Jonas
+  46734 Daryl Hall & John Oates
+  46683 David Bowie
+  46555 Gorillaz
+  46425 Grouplove
+  46201 Melanie Martinez
+  46072 5 Seconds of Summer
