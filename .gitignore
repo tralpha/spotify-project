@@ -7,4 +7,16 @@ md5sums
 mpd.v1.tar
 lastfm_subset
 data
-src
+srcREADME.md
+._README.md
+._data
+._lastfm_subset
+._lastfm_subset.zip
+._lastfm_test
+._lastfm_test.zip
+._lastfm_train.zip
+._license.txt
+._md5sums
+._mpd.v1.tar
+._src
+._stats.txt
