@@ -7,7 +7,7 @@ md5sums
 mpd.v1.tar
 lastfm_subset
 data
-srcREADME.md
+src
 ._README.md
 ._data
 ._lastfm_subset
@@ -20,3 +20,4 @@ srcREADME.md
 ._mpd.v1.tar
 ._src
 ._stats.txt
+._Scope of Work (SOW).pdf
