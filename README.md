@@ -1,4 +1,14 @@
 # The Million Playlist Dataset
+
+## To DO:
+1. Review and think of the Average Track Duration plot
+2. Do EDA on more features, one Question at the time? Should we include 10 more plots, _in addition_ to John's histograms previously calculated?
+3. Start working on final report, in a *nice* and well documented Jupyter
+4. Test the classifier performance based on re-calculating the total number of unique tracks, playlist duration, and other global playlist features.
+5. 
+
+
+## Dataset Description:
 The Million Playlist Dataset contains 1,000,000 playlists created by
 users on the Spotify platform.  It can be used by researchers interested
 in exploring how to improve the music listening experience.
