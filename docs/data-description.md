@@ -57,7 +57,7 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![fig1](spotify\-\project/images/length_his)
+![fig1](images/length_his)
 Playlist length approximately follows a power law distribution.  The playlists in the data set were selected by Spotify to have between 5 and 250 tracks. Many playlists naturally have about 25-50 tracks with 66 being the average track count.
 
 **Histogram of playlist follower count**
@@ -80,7 +80,7 @@ ax.set_ylabel("Frequency (log scale)", fontsize = 25, labelpad = 20)
 ax.set_title("Playlist Follower Count Distribution (" + titles[0] + ")", fontsize = 30, pad = 50)
 ax.set_yscale('symlog', linthreshy = 10)
 ```
-![fig2](../images/Followers_Hist_Linear.png)
+![fig2](images/Followers_Hist_Linear.png)
 Follower count also roughly follows a power law distribution. There are a handful of playlists with over 50,000 followers, but the large majority of playlists have only a few followers.  We expect to see much more variance between playlists than would be the case if all sampled playlists had many followers.
 
 **Popular artists in MPD**
@@ -113,7 +113,7 @@ ax.bar(top["artist"].iloc[0:30], top["frequency"].iloc[0:30], color = "mediumspr
 ax.set_ylabel("Frequency in MPD tracks", fontsize = 22, labelpad = 30)
 ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
 ```
-![fig3](../images/top_artists.png)
+![fig3](images/top_artists.png)
 The most popular artist in our dataset is Drake.
 
 **Top playlist titles in MPD**
@@ -140,11 +140,11 @@ ax.set_xlabel("Titles", fontsize = 20)
 ax.set_ylabel("Frequency in MPD", fontsize = 20)
 ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
-![fig4](spotify-project/images/top_playlist_title.png)
+![fig4](images/top_playlist_title.png)
 The most popular playlist titles are country, chill and rap.  Many playlist titles convey useful information about genre or mood.  We will eagerly use playlist name information when training our model.
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Most popular songs in MPD**
 
-<img src="spotify-project/images/summary_stats.png" width="700">
+<img src="images/summary_stats.png" width="700">
 
 Only 1.9% of the playlists have descriptions, but that still leaves almost 19,000 playlists with descriptions that will likely be helpful. On average, each song appears in about 30 playlists, and, across all playlists, each unique artists has about 8 unique songs.
