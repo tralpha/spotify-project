@@ -113,12 +113,7 @@ playlist_map_df.tail()
 playlist_map_df.head()
 playlist_map_df.tail()
 ```
-	playlist_pid	track_uri
-0	0	spotify:track:0UaMYEvWZi0ZqiDOoHU3YI
-1	0	spotify:track:6I9VzXrHxO9rA9A5euc8Ak
-2	0	spotify:track:0WqIKmW4BTrj3eJFmnCKMv
-3	0	spotify:track:1AWQoqb9bSvzTjaLralEkT
-4	0	spotify:track:1lzr43nnXAijIGY
+
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
