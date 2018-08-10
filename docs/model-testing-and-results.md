@@ -5,7 +5,6 @@
 [EDA](https://tralpha.github.io/spotify-project/eda.html) <br>
 [Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
 [Metrics](https://tralpha.github.io/spotify-project/metrics.html) <br>
-[Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
 [Model Training](https://tralpha.github.io/spotify-project/model-training.html) <br>
 [Interpreting the Model](https://tralpha.github.io/spotify-project/interpreting-the-model.html) <br>
 [Model Testing and Results](https://tralpha.github.io/spotify-project/model-testing-and-results.html) <br>
