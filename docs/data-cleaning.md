@@ -15,12 +15,12 @@
 **Loading the data**
 <br>
 The MPD is organized into 100 separate JSON files where each file contain 1'000 playlists. In order to give us flexibility we first load the data into four distict data structures:
-1. A list containing all the playlist
-2. A dictionary with all the tracks
-3. A list that maps songs to playlists
-4. A list that maps duplicate songs to playlists
+1. A list containing all the <b>playlist</b>
+2. A dictionary with all the <b>tracks</b>
+3. A list that maps <b>songs to playlists</b>
+4. A list that maps <b>duplicate songs to playlists</b>
 
-The fourt data structure was added after we conducted the EDA. During the EDA we found out that a playlist can contain duplicate songs. Although this may make sense for someone that is creating a playlist we feel that it does not make sense for a suggestion engine. Suggesting something that has already been played feels like cheating. We put all the duplicates into the last data structure, that way we could see how many duplicates there were.
+The fourt data structure was added after we conducted the EDA. During the EDA we found out that a playlist can contain duplicate songs. Although this may make sense for someone that is creating a playlist manually, we feel that it does not make sense for a suggestion engine. Suggesting something that has already been played feels like cheating. We put all the duplicates into the last data structure, that way we could see how many duplicates there were and easily exclude them from further processing.
 
 ```python
 playlists = list()
@@ -89,6 +89,31 @@ def process_mpd(path):
 quick = True
 process_mpd('mpd.v1/data')
 ```
+After loading up the entire dataset we have:<br>
+<b>1'000'000</b> playlists<br>
+<b>2'262'292</b> tracks<br>
+<b>65'464'776</b> songs in the playlists<br>
+<b>881'652</b> duplicate songs<br>
+
+**Pandas**
+<br>
+We now convert our three data structures to Pandas data frames:
+```python
+playlist_df = pd.DataFrame(playlists)
+tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
+playlist_map_df = pd.DataFrame(map_pl, columns=['playlist_pid', 'track_uri'])
+```
+
+```python
+playlist_map_df.head()
+playlist_map_df.tail()
+```
+
+```python
+playlist_map_df.head()
+playlist_map_df.tail()
+```
+
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
