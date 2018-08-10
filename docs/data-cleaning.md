@@ -89,6 +89,12 @@ def process_mpd(path):
 quick = True
 process_mpd('mpd.v1/data')
 ```
+After loading up the entire dataset we have:
+1'000'000 playlists
+2'262'292 tracks
+65'464'776 songs in the playlists
+881'652 duplicate songs in the playlists that we did not include
+
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
