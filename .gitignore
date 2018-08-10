@@ -21,3 +21,8 @@ src
 ._src
 ._stats.txt
 ._Scope of Work (SOW).pdf
+._negative_samples.csv
+images/.DS_Store
+license.txt
+negative_samples.csv
+stats.txt
