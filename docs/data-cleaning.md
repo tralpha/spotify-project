@@ -123,7 +123,7 @@ tracks_df.tail()
 playlist_map_df.head()
 playlist_map_df.tail()
 ```
-![fig3](images/playlist_map_df.png)
+<img src="images/playlist_map_df.png" width="700">
 
 **Negative Samples**
 <br>
