@@ -141,7 +141,7 @@ We verify that the new dataset is indeed scrambled
 playlist_map_df.head()
 playlist_map_df_negative.head()
 ```
-![fig4](images/playlist_map_df_scrambled.png)
+<img src="images/playlist_map_df_scrambled.png" width="480">
 
 **Denormalizing the data**
 <br>
