@@ -13,6 +13,7 @@
 
 # Data Cleaning:
 **Loading the data**
+
 The MPD is organized into 100 separate JSON files where each file contain 1'000 playlists. I order to give is flexibility we first load the data into four distict data structures:
 1. A list containing all the playlist
 2. A dictionary with all the tracks
