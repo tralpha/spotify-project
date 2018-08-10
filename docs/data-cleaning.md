@@ -143,7 +143,48 @@ playlist_map_df_negative.head()
 ```
 ![fig4](images/playlist_map_df_scrambled.png)
 
+**Denormalizing the data**
+<br>
+We cannot use multiple data frames for our midelling, we next need to merge the data frame together. We first merge the dataset with the original data into a single data frame
+```python
+merged = pd.merge(
+    pd.merge(
+        tracks_df, playlist_map_df, left_index=True, right_on='track_uri'),
+    playlist_df,
+    on='playlist_pid')
+```
 
+We also create a single dataframe of the scrambled (negative samples) data frame:
+```python
+negative_samples = pd.merge(
+    pd.merge(
+        tracks_df, playlist_map_df_negative, left_index=True, right_on='track_uri'),
+    playlist_df,
+    on='playlist_pid')
+```
+We now have two dataframe both with the same playlist, but the negative samples playlist has randomized its song contents. Before merging the datasets together we add the binary response variable:
+```python
+negative_samples['match'] = 0
+merged['match'] = 1
+```
+
+We merge the two datasets together
+```python
+dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid']).reset_index(drop=True)
+```
+
+
+```python
+data_x = dataset.loc[:, dataset.columns != 'match']
+data_y = dataset.match
+data_train, data_test, y_train, y_test = train_test_split(
+    data_x,
+    data_y,
+    test_size=0.3,
+    stratify=dataset[['playlist_pid', 'match']],
+    random_state=42,
+    shuffle=True)
+```
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
