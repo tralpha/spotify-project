@@ -13,6 +13,7 @@
 # Million Playlist Dataset:
 This dataset contains 5.4 GB of data and was created in 2017. It contains the following information for each playlist and track within:
 
+
 **Playlist specific features:**
 - Playlist name
 - Indicator if the playlist is a collaboration
@@ -85,6 +86,8 @@ ax.set_yscale('symlog', linthreshy = 10)
 ![fig2](images/Followers_Hist_Linear.png)
 Follower count also roughly follows a power law distribution. There are a handful of playlists with over 50,000 followers, but the large majority of playlists have only a few followers.  We expect to see much more variance between playlists than would be the case if all sampled playlists had many followers.
 
+
+
 **Popular artists in MPD**
 
 ```python
@@ -118,6 +121,8 @@ ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
 ![fig3](images/top_artists.png)
 The most popular artist in our dataset is Drake.
 
+
+
 **Top playlist titles in MPD**
 
 ```python
@@ -146,7 +151,6 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 The most popular playlist titles are country, chill and rap.  Many playlist titles convey useful information about genre or mood.  We will eagerly use playlist name information when training our model.
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Most popular songs in MPD**
-
-<img src="images/summary_stats.png" width="700">
-
+ 
+ <img src="images/summary_stats.png" width="700">
 Only 1.9% of the playlists have descriptions, but that still leaves almost 19,000 playlists with descriptions that will likely be helpful. On average, each song appears in about 30 playlists, and, across all playlists, each unique artists has about 8 unique songs.
