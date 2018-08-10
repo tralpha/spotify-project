@@ -57,7 +57,7 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![fig1](spotify-project/images/length_his)
+![fig1](spotify\-\project/images/length_his)
 Playlist can go down to 5 tracks in length, but the large majority of playlists have enough tracks for a model to learn on.
 
 
