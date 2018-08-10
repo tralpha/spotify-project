@@ -15,6 +15,84 @@
 
 **Visualization**
 
+```python
+#Get important features and visual for features
+#get top feature indices and ratings
+
+importances = AdaModel.feature_importances_
+indices = np.argsort(importances)[::-1]
+
+top50index = []
+top50importance = []
+for f in range(50):
+    top50index.append(indices[f])
+    top50importance.append(importances[indices[f]])
+```
+
+```python
+#helper in getting top features and making visual
+#convert relevant dataframe columns to lowercase so we can compare with top feature output
+
+track_artist_lower_df = tracks_df["track_artist_uri"].apply(lambda x: x.lower())
+track_album_lower_df = tracks_df["track_album_uri"].apply(lambda x: x.lower())
+merged_track_uri_lower_df = merged["track_uri"].apply(lambda x: x.lower())
+
+#Take a uri and return album, artist or song title in plain english
+def get_translation(uri_type, uri):
+    
+    track = False  #if a single track/song is input as uri, I need to handle it differently
+    if uri_type == "track_artist_uri":
+        df = track_artist_lower_df
+        col = "track_artist_name"
+    elif uri_type == "track_album_uri":
+        df = track_album_lower_df
+        col = "track_album_name"
+    elif uri_type == "track_uri":
+        df = merged_track_uri_lower_df
+        col = "track_name"
+        track = True   #Handle track_name differently by going to the merged df
+    for i in range(len(tracks_df)):
+        if df[i] == uri:
+            if track == True:
+                return merged.iloc[i][col]
+            return tracks_df.iloc[i][col]
+            break
+```
+
+```python
+#Make list of top features
+feature_names = []
+
+#Loop through the indices of top features and append them to a list in plain english, not uri info
+for i in top50index:
+    feature = vectorizer.get_feature_names()[i].split("__")
+    if feature[0] == "track_artist_uri":
+        feature_names.append("Artist = " + get_translation("track_artist_uri", feature[1]))
+    elif feature[0] == "track_album_uri":
+        feature_names.append("Album = " + get_translation("track_album_uri", feature[1]))
+    elif feature[0] == "track_uri":
+        feature_names.append("Song = " + get_translation("track_uri", feature[1].lstrip()))
+    
+    else:
+        feature_names.append(feature[0] + "_" + feature[1])
+```
+
+```python
+#plot
+
+fig, ax = plt.subplots(1,1, figsize = (20,15))
+y_pos = np.arange(len(feature_names))
+ax.barh(feature_names, top50importance, align = "center", color = "mediumspringgreen")
+for tick in ax.get_xticklabels():
+    tick.set_rotation(90)
+ax.grid(alpha = 0)
+ax.set_xlabel("Importance", fontsize = 20)
+ax.set_ylabel("Features", fontsize = 20)
+ax.yaxis.set_tick_params(labelsize=12)
+ax.xaxis.set_tick_params(labelsize=15)
+```
+
+
 ![fig1](images/Feature_Importance.png)
 
 
