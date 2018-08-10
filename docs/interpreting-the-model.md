@@ -10,3 +10,5 @@
 [Interpreting the Model](https://tralpha.github.io/spotify-project/interpreting-the-model.html) <br>
 [Model Testing and Results](https://tralpha.github.io/spotify-project/model-testing-and-results.html) <br>
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
+
+![fig1](images/Feature_Importance.png)
