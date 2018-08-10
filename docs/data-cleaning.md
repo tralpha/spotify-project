@@ -104,18 +104,21 @@ tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
 playlist_map_df = pd.DataFrame(map_pl, columns=['playlist_pid', 'track_uri'])
 ```
 
+<b>The playlist dataframe</b>
 ```python
 playlist_df.head()
 playlist_df.tail()
 ```
 ![fig1](images/playlist_df.png)
 
+<b>The tracks dataframe</b>
 ```python
 tracks_df.head()
 tracks_df.tail()
 ```
 ![fig1](images/tracks_df.png)
 
+<b>The playlist to song mapping dataframe</b>
 ```python
 playlist_map_df.head()
 playlist_map_df.tail()
