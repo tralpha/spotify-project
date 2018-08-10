@@ -57,7 +57,7 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![fig1](images/length_his)
+![fig1](images/length_his.png)
 Playlist length approximately follows a power law distribution.  The playlists in the data set were selected by Spotify to have between 5 and 250 tracks. Many playlists naturally have about 25-50 tracks with 66 being the average track count.
 
 
