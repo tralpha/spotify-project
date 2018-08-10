@@ -57,7 +57,7 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![fig1](images/Length_Hist.png)
+![fig1](spotify-project/images/Length_Hist.png)
 Playlist can go down to 5 tracks in length, but the large majority of playlists have enough tracks for a model to learn on.
 
 
@@ -81,7 +81,7 @@ ax.set_ylabel("Frequency (log scale)", fontsize = 25, labelpad = 20)
 ax.set_title("Playlist Follower Count Distribution (" + titles[0] + ")", fontsize = 30, pad = 50)
 ax.set_yscale('symlog', linthreshy = 10)
 ```
-![fig2](images/Followers_Hist_Linear.png)
+![fig2](spotify-project/images/Followers_Hist_Linear.png)
 
 
 **Popular artists in MPD**
@@ -114,7 +114,7 @@ ax.bar(top["artist"].iloc[0:30], top["frequency"].iloc[0:30], color = "mediumspr
 ax.set_ylabel("Frequency in MPD tracks", fontsize = 22, labelpad = 30)
 ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
 ```
-![fig3](images/top_artists.png)
+![fig3](spotify-project/images/top_artists.png)
 
 
 **Top playlist titles in MPD**
@@ -141,9 +141,9 @@ ax.set_xlabel("Titles", fontsize = 20)
 ax.set_ylabel("Frequency in MPD", fontsize = 20)
 ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
-![fig4](images/top_playlist_title.png)
+![fig4](spotify-project/images/top_playlist_title.png)
 
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Most popular songs in MPD**
 
-<img src="images/summary_stats.png" width="700">
+<img src="spotify-project/images/summary_stats.png" width="700">
