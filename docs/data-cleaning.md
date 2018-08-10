@@ -28,7 +28,6 @@ map_pl = list()
 map_pl_duplicate = list()
 max_files_for_quick_processing = 4
 
-
 def process_track(track):
     key = track['track_uri']
     if not key in tracks:
@@ -42,7 +41,6 @@ def process_track(track):
         tk['track_pos'] = track['pos']
         tracks[track['track_uri']] = tk
     return key
-
 
 def process_playlist(playlist):
     pl = dict()
@@ -86,8 +84,6 @@ def process_mpd(path):
             count += 1
             if quick and count > max_files_for_quick_processing:
                 break
-
-                
 
 quick = True
 process_mpd('mpd.v1/data')
