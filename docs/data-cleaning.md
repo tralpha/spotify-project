@@ -116,16 +116,17 @@ playlist_df.tail()
 tracks_df.head()
 tracks_df.tail()
 ```
-![fig1](images/tracks_df.png)
+![fig2](images/tracks_df.png)
 
 <b>The playlist to song mapping dataframe</b>
 ```python
 playlist_map_df.head()
 playlist_map_df.tail()
 ```
-![fig1](images/playlist_map_df.png)
+![fig3](images/playlist_map_df.png)
 
 **Negative Samples**
+<br>
 In order to train our model we also need a negative sample set. We will add random songs to each playlists. We add a binary value called "Match" which is used as the response variable for the model.<br>
 
 We make a copy of the playlist to song mapping dataframe, we then randomly assign songs to playlist:
@@ -134,6 +135,15 @@ playlist_map_df_negative = playlist_map_df.copy()
 random = playlist_map_df.sample(n=len(playlist_map_df)).reset_index()
 playlist_map_df_negative['track_uri'] = random['track_uri']
 ```
+
+We verify that the new dataset is indeed scrambled
+```python
+playlist_map_df.head()
+playlist_map_df_negative.head()
+```
+![fig4](images/playlist_map_df_scrambled.png)
+
+
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
