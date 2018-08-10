@@ -105,14 +105,22 @@ playlist_map_df = pd.DataFrame(map_pl, columns=['playlist_pid', 'track_uri'])
 ```
 
 ```python
-playlist_map_df.head()
-playlist_map_df.tail()
+playlist_df.head()
+playlist_df.tail()
 ```
+![fig1](images/playlist_df.png)
+
+```python
+tracks_df.head()
+tracks_df.tail()
+```
+![fig1](images/tracks_df.png)
 
 ```python
 playlist_map_df.head()
 playlist_map_df.tail()
 ```
+![fig1](images/playlist_map_df.png)
 
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
