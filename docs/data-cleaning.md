@@ -100,8 +100,9 @@ After loading up the entire dataset we have:<br>
 <b>881'652</b> duplicate songs<br>
 
 ## Pandas
-<br>
+
 We now convert our three data structures to Pandas data frames:
+
 ```python
 playlist_df = pd.DataFrame(playlists)
 tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
