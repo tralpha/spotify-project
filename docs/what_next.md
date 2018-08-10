@@ -32,6 +32,7 @@ plt.tick_params(labelsize = 13)
 plt.grid(alpha = 0)
 plt.legend();
 ```
+*Note the **Data Cleaning** section of this site:  we have populated each playlist in our dataset with randomly choosen songs that were not originally present.  These songs are equal in number to the songs that actually belong to the playlist as choosen by Spotify users.  The songs that were originally present we label with the target category `match = 1` and the randomly assigned songs are labeled with the target category `match = 0`
 ![fig1](images/pca.png)
 
 ### Separating a Validation Set and Tuning Hyperparameters
