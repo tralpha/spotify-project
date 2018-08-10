@@ -101,7 +101,7 @@ ax.xaxis.set_tick_params(labelsize=15)
 ![fig1](images/Feature_Importance.png)
 
 
-**General Thoughts**
+### General Thoughts
 We can note a few things about the features our model found most relevant for making split decsions.  The overarching theme is that although we have a plethora of features, we are lacking in highly important features.  As we suspected, track duration is the most relevant feature by a wide margin and even it is not terribly important on its own.  Most other features are categorical where a large set of classes are possible, so they tend to spread importance level thin.  For example, artists that the model found to be good splits were 'Drake', 'Tegan and Sara', 'Deftones', 'Pearl Jam', 'Rihanna', 'Luke Bryan' and 'Kanye West'.  These artists, although, disproportionately popular, share feature importance with so many of the other almost 300,000 unique artists in the MPD.  Going into further hyperparameter tuning after seeing features are weak discriminators on average, we can get some intuition that a Random Forest model is going to be dependent on deep trees to make good classification matches for playlists.  Likewise, an AdaBoost will be dependent on a relatively high number of iterations to be sucessful.  
 
 **Important Artists**
