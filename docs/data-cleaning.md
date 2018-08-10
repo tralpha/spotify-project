@@ -12,15 +12,19 @@
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 # Data Cleaning:
-**Loading the data**
-<br>
-The MPD is organized into 100 separate JSON files where each file contain 1'000 playlists. In order to give us flexibility we first load the data into four distict data structures:
-1. A list containing all the <b>playlist</b>
-2. A dictionary with all the <b>tracks</b>
-3. A list that maps <b>songs to playlists</b>
-4. A list that maps <b>duplicate songs to playlists</b>
+## Loading the data
 
-The fourt data structure was added after we conducted the EDA. During the EDA we found out that a playlist can contain duplicate songs. Although this may make sense for someone that is creating a playlist manually, we feel that it does not make sense for a suggestion engine. Suggesting something that has already been played feels like cheating. We put all the duplicates into the last data structure, that way we could see how many duplicates there were and easily exclude them from further processing.
+The MPD is organized into 100 separate JSON files where each file contain 1'000 playlists. In order to give us flexibility we first load the data into four distict data structures:
+
+1. A list containing all the *playlist*
+
+2. A dictionary with all the *tracks*
+
+3. A list that maps *songs* to *playlists*
+
+4. A list that maps *duplicate songs* to *playlists*
+
+The fourth data structure was added after we conducted the EDA. During the EDA we found out that a playlist can contain duplicate songs. Although this may make sense for someone that is creating a playlist manually, we feel that it does not make sense for a suggestion engine. Suggesting something that has already been played feels like cheating. We put all the duplicates into the last data structure, that way we could see how many duplicates there were and easily exclude them from further processing.
 
 ```python
 playlists = list()
@@ -95,9 +99,10 @@ After loading up the entire dataset we have:<br>
 <b>65'464'776</b> songs in the playlists<br>
 <b>881'652</b> duplicate songs<br>
 
-**Pandas**
-<br>
+## Pandas
+
 We now convert our three data structures to Pandas data frames:
+
 ```python
 playlist_df = pd.DataFrame(playlists)
 tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
@@ -123,11 +128,12 @@ tracks_df.tail()
 playlist_map_df.head()
 playlist_map_df.tail()
 ```
-![fig3](images/playlist_map_df.png)
+<img src="images/playlist_map_df.png" width="440">
 
-**Negative Samples**
+## Negative Samples
+**Here we first refer to our response variable "Match" which will be frequently referenced in our reporting**
 <br>
-In order to train our model we also need a negative sample set. We will add random songs to each playlists. We add a binary value called "Match" which is used as the response variable for the model.<br>
+In order to train our model we also need a negative sample set. We will add random songs to each playlist. We add a binary value called `match` which is used as the response variable for the model.<br>
 
 We make a copy of the playlist to song mapping dataframe, we then randomly assign songs to playlist:
 ```python
@@ -136,16 +142,16 @@ random = playlist_map_df.sample(n=len(playlist_map_df)).reset_index()
 playlist_map_df_negative['track_uri'] = random['track_uri']
 ```
 
-We verify that the new dataset is indeed scrambled
+We verify that the new dataset is indeed scrambled by checking heads:
 ```python
 playlist_map_df.head()
 playlist_map_df_negative.head()
 ```
-![fig4](images/playlist_map_df_scrambled.png)
+<img src="images/playlist_map_df_scrambled.png" width="440">
 
-**Denormalizing the data**
+## Denormalizing the data
 <br>
-We cannot use multiple data frames for our midelling, we next need to merge the data frame together. We first merge the dataset with the original data into a single data frame
+We cannot effectively use multiple data frames for our modelling. we next need to merge the data frames together. We first merge the dataset with the original data into a single data frame:
 ```python
 merged = pd.merge(
     pd.merge(
@@ -154,7 +160,7 @@ merged = pd.merge(
     on='playlist_pid')
 ```
 
-We also create a single dataframe of the scrambled (negative samples) data frame:
+We also create a single dataframe of the scrambled *(negative samples)* data frame:
 ```python
 negative_samples = pd.merge(
     pd.merge(
@@ -162,13 +168,13 @@ negative_samples = pd.merge(
     playlist_df,
     on='playlist_pid')
 ```
-We now have two dataframe both with the same playlist, but the negative samples playlist has randomized its song contents. Before merging the datasets together we add the binary response variable:
+We now have two dataframes both with the same playlist, but the negative samples playlist has randomized its song contents. Before merging the datasets together we add the binary response variable `match`.  Each playlist will have a matching to not matching ratio of 1:1.
 ```python
 negative_samples['match'] = 0
 merged['match'] = 1
 ```
 
-We merge the two datasets together
+We merge the two datasets together:
 ```python
 dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid']).reset_index(drop=True)
 ```
@@ -186,10 +192,5 @@ data_train, data_test, y_train, y_test = train_test_split(
     shuffle=True)
 ```
 
-Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
-
-We started by creating 3 separate data frames from the MPD: one for global playlist features (one row per unique playlist), one for track features (one row per unique track) and one to map tracks to playlists.  In order to explore the data on the fly, we limit the number of playlists loaded into our notebook to a few thousand.  Finally, we merge the data frames to create one frame, ‘merged’, that has one track per row. The features of each track are the features of the playlist from which it came from together with the features of the track itself. 
-
-As an example, if we loaded n playlists each containing m songs, then our merged dataframe will have n x m rows.
-After feature engineering, we create our label variable, which is called `match`. `match` is described below:
-Match: All track rows are set ‘match’ = 1, signifying that they belong to their respective playlists.  In order to aid the training of any model, we also appended to ‘merged’ a negative sample dataframe. The negative sample frame is a copy of ‘merged’, but with all the tracks randomly assigned to playlists with ‘match’ column set to 0. Each playlist’s positive sample to negative sample ratio is 1:1.
+## Vectorizing the Data to Extract Word Features and One Hot Encode Categoricals
+In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes.  
