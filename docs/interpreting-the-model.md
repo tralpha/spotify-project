@@ -13,11 +13,12 @@
 
 # Interpreting The Model
 
-**Visualization**
+**Building Feature Importance Visualization from AdaBoostClassifier Model**
 
+**Extract top 50 feature indices and importance levels from Ada's feature_importances attribute**
 ```python
-#Get important features and visual for features
-#get top feature indices and ratings
+# Get important features
+# Get top feature indices and ratings
 
 importances = AdaModel.feature_importances_
 indices = np.argsort(importances)[::-1]
@@ -29,6 +30,7 @@ for f in range(50):
     top50importance.append(importances[indices[f]])
 ```
 
+**We reformat some of the earlier dataframes to lowercase strings and define a function get_translation that will help convert uri features that are in our sparse matrix to the artists, albums and tracks that they represent, in plain english.
 ```python
 #helper in getting top features and making visual
 #convert relevant dataframe columns to lowercase so we can compare with top feature output
@@ -59,6 +61,7 @@ def get_translation(uri_type, uri):
             break
 ```
 
+**We loop through the top 50 feature indices in the sparse matrix that vectorizer created to get those features and then translate them into readable english rather than numerical id information.
 ```python
 #Make list of top features
 feature_names = []
@@ -77,6 +80,7 @@ for i in top50index:
         feature_names.append(feature[0] + "_" + feature[1])
 ```
 
+**We plot the most important features for visual insight into how our Ada model works.
 ```python
 #plot
 
