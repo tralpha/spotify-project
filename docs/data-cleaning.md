@@ -192,4 +192,5 @@ data_train, data_test, y_train, y_test = train_test_split(
     shuffle=True)
 ```
 
-Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
+## Vectorizing the Data to Extract Word Features and One Hot Encode Categoricals
+In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes.  
