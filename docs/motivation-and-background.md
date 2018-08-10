@@ -1,15 +1,15 @@
 # Table of Contents
-[Project Statement and Goals](https://john-daciuk.github.io/spotify/project-statement-and-goals.html) <br>
-[Motivation and Background](https://john-daciuk.github.io/spotify/motivation-and-background.html) <br>
-[Data Description](https://john-daciuk.github.io/spotify/data-description.html) <br>
-[EDA](https://john-daciuk.github.io/spotify/eda.html) <br>
-[Data Cleaning](https://john-daciuk.github.io/spotify/data-cleaning.html) <br>
-[Metrics](https://john-daciuk.github.io/spotify/metrics.html) <br>
-[Data Cleaning](https://john-daciuk.github.io/spotify/data-cleaning.html) <br>
-[Model Training](https://john-daciuk.github.io/spotify/model-training.html) <br>
-[Interpreting the Model](https://john-daciuk.github.io/spotify/interpreting-the-model.html) <br>
-[Model Testing and Results](https://john-daciuk.github.io/spotify/model-testing-and-results.html) <br>
-[Literature Review](https://john-daciuk.github.io/spotify/literature-review.html) <br>
+[Project Statement and Goals](https://tralpha.github.io/spotify-project/project-statement-and-goals.html) <br>
+[Motivation and Background](https://tralpha.github.io/spotify-project/motivation-and-background.html) <br>
+[Data Description](https://tralpha.github.io/spotify-project/data-description.html) <br>
+[EDA](https://tralpha.github.io/spotify-project/eda.html) <br>
+[Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
+[Metrics](https://tralpha.github.io/spotify-project/metrics.html) <br>
+[Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
+[Model Training](https://tralpha.github.io/spotify-project/model-training.html) <br>
+[Interpreting the Model](https://tralpha.github.io/spotify-project/interpreting-the-model.html) <br>
+[Model Testing and Results](https://tralpha.github.io/spotify-project/model-testing-and-results.html) <br>
+[Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 # Motivation:
 Recommendation systems have become an integral part of many of our lives—— perhaps more than we realize.  From reading, shopping, and web browsing to traveling accomodations and dating, the internet has brought a bewildering gamut of choices.  With a myriad of options, making optimal decisions can be stressful; however, it's not hard to recount instances where an algorithm has heped us save time or even make a pivotal decision.  As more and more content goes online, and information and media become more convenient to access, recommendation systems will become more central than they already are.  
