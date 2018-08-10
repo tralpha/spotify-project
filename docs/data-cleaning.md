@@ -104,6 +104,22 @@ tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
 playlist_map_df = pd.DataFrame(map_pl, columns=['playlist_pid', 'track_uri'])
 ```
 
+```python
+playlist_map_df.head()
+playlist_map_df.tail()
+```
+
+```python
+playlist_map_df.head()
+playlist_map_df.tail()
+```
+	playlist_pid	track_uri
+0	0	spotify:track:0UaMYEvWZi0ZqiDOoHU3YI
+1	0	spotify:track:6I9VzXrHxO9rA9A5euc8Ak
+2	0	spotify:track:0WqIKmW4BTrj3eJFmnCKMv
+3	0	spotify:track:1AWQoqb9bSvzTjaLralEkT
+4	0	spotify:track:1lzr43nnXAijIGY
+
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
 We started by creating 3 separate data frames from the MPD: one for global playlist features (one row per unique playlist), one for track features (one row per unique track) and one to map tracks to playlists.  In order to explore the data on the fly, we limit the number of playlists loaded into our notebook to a few thousand.  Finally, we merge the data frames to create one frame, ‘merged’, that has one track per row. The features of each track are the features of the playlist from which it came from together with the features of the track itself. 
