@@ -150,6 +150,8 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ![fig4](images/top_playlist_titles.png)
 The most popular playlist titles are country, chill and rap.  Many playlist titles convey useful information about genre or mood.  We will eagerly use playlist name information when training our model.
 
+
+
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Most popular songs in MPD**
  
  <img src="images/summary_stats.png" width="700">
