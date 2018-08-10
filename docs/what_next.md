@@ -37,6 +37,7 @@ plt.legend();
 ### Separating a Validation Set and Tuning Hyperparameters
 
 ### Taking advantage of the Million Song Dataset
+The MSD holds song specific feature information that would be useful for a model to be able to further recognize similarities between songs and recommend songs to a user that exhibit the qualities that user indicates they like by the name and description of their playlist, as well as the songs they already added.
 
 ### Leveraging Spotify's API
-Create our own playlists with the API...
+The most exciting part of this project would be to be able to easily create our own playlists and get recommendations from our model.  R-Precision is not the most heartening metric; it tend to be low even for the winners of the Spotify Competition and it's just a single number.  By using the Spotify API, we could much more fluidly interact with our model and render its recommendations much more palpable.
