@@ -114,7 +114,7 @@ ax.bar(top["artist"].iloc[0:30], top["frequency"].iloc[0:30], color = "mediumspr
 ax.set_ylabel("Frequency in MPD tracks", fontsize = 22, labelpad = 30)
 ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
 ```
-![fig3](spotify-project/images/top_artists.png)
+![fig3](../images/top_artists.png)
 
 
 **Top playlist titles in MPD**
