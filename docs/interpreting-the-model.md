@@ -12,9 +12,9 @@
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 # Interpreting The Model
----
 
-### Building Feature Importance Visualization from AdaBoostClassifier Model**
+
+### Building Feature Importance Visualization from AdaBoostClassifier Model
 
 **We extract top 50 feature indices and importance levels from Ada's feature_importances attribute**
 ```python
