@@ -90,10 +90,10 @@ quick = True
 process_mpd('mpd.v1/data')
 ```
 After loading up the entire dataset we have:
-1'000'000 playlists
-2'262'292 tracks
-65'464'776 songs in the playlists
-881'652 duplicate songs in the playlists that we did not include
+<b>1'000'000</b> playlists<br>
+<b>2'262'292</b> tracks<br>
+<b>65'464'776</b> songs in the playlists<br>
+<b>881'652</b> duplicate songs in the playlists that we did not include<br>
 
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
