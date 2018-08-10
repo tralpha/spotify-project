@@ -95,6 +95,13 @@ After loading up the entire dataset we have:<br>
 <b>65'464'776</b> songs in the playlists<br>
 <b>881'652</b> duplicate songs<br>
 
+**Pandas**
+We now convert our three data structures to Pandas data frames:
+```python
+playlist_df = pd.DataFrame(playlists)
+tracks_df = pd.DataFrame.from_dict(tracks, orient='index')
+playlist_map_df = pd.DataFrame(map_pl, columns=['playlist_pid', 'track_uri'])
+```
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
