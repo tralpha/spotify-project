@@ -15,10 +15,10 @@
 **Loading the data**
 <br>
 The MPD is organized into 100 separate JSON files where each file contain 1'000 playlists. In order to give us flexibility we first load the data into four distict data structures:
-1. A list containing all the playlist
-2. A dictionary with all the tracks
-3. A list that maps songs to playlists
-4. A list that maps duplicate songs to playlists
+1. A list containing all the <b>playlist</b>
+2. A dictionary with all the <b>tracks</b>
+3. A list that maps <b>songs to playlists</b>
+4. A list that maps <b>duplicate songs to playlists</b>
 
 The fourt data structure was added after we conducted the EDA. During the EDA we found out that a playlist can contain duplicate songs. Although this may make sense for someone that is creating a playlist we feel that it does not make sense for a suggestion engine. Suggesting something that has already been played feels like cheating. We put all the duplicates into the last data structure, that way we could see how many duplicates there were and easily exclude them from further processing.
 
