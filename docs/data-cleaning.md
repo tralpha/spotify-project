@@ -125,6 +125,15 @@ playlist_map_df.tail()
 ```
 ![fig1](images/playlist_map_df.png)
 
+**Negative Samples**
+In order to train our model we also need a negative sample set. We will add random songs to each playlists. We add a binary value called "Match" which is used as the response variable for the model.<br>
+
+We make a copy of the playlist to song mapping dataframe, we then randomly assign songs to playlist:
+```python
+playlist_map_df_negative = playlist_map_df.copy()
+random = playlist_map_df.sample(n=len(playlist_map_df)).reset_index()
+playlist_map_df_negative['track_uri'] = random['track_uri']
+```
 
 Vectorization, transfer to sparse matrix, merging of playlist and song data, creating negative samples to train on, creating massive track list to predict on.
 
