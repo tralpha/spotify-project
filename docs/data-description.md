@@ -81,7 +81,7 @@ ax.set_ylabel("Frequency (log scale)", fontsize = 25, labelpad = 20)
 ax.set_title("Playlist Follower Count Distribution (" + titles[0] + ")", fontsize = 30, pad = 50)
 ax.set_yscale('symlog', linthreshy = 10)
 ```
-![fig2](spotify-project/images/Followers_Hist_Linear.png)
+![fig2](../images/Followers_Hist_Linear.png)
 
 
 **Popular artists in MPD**
