@@ -93,9 +93,11 @@ We now go one step further and we analyse the frequency of individual words in p
 
 **The top 100 words for playlist names seem to be categorical in nature as well**
 <br>
+<br>
 ![fig2](images/playlist_name_top_100_words.png)
 
 **The top 100 words for playlist descriptions are also categorical**
+<br>
 <br>
 ![fig3](images/playlist_description_top_100_words.png)
 
