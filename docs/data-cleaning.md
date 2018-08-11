@@ -313,3 +313,8 @@ class ItemSelector(BaseEstimator, TransformerMixin):
         return [dataset.columns[self.key]]
         
 ```
+
+```python
+X_train = vectorizer.fit_transform(data_train.values)
+X_test = vectorizer.transform(data_test.values)
+```
