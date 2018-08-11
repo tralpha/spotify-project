@@ -116,7 +116,7 @@ As with artists, some of the most popular playlist names such as 'country', 'chr
 
 Playlist pid is central to our vision for how our Ada model works, since playlist pid uniquely identifies each playlist.  By splitting on playlist pid, AdaBoost can take into account which playlist it is considering when assigning a probability to whether a particular song matches that playlist.  
 
-### Building Feature Importance Visualization that Neglects `playlist_pid` and `track_duration` to get a clearer picture of the other features.
+### Building Feature Importance Visualization that Neglects playlist_pid and track_duration to get a clearer picture of the other features discussed.
 
 ```python
 #Check for relevant features besides playlist_pid numbers
