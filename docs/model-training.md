@@ -29,8 +29,36 @@ The vectorizer is fit on the training set, to obtain a big matrix of features, `
 
 We then transform our `X_test` matrix to obtain a similar matrix, with the same number of features as the `X_train`. 
 
+
+
 After both the training and test matrices are obtained, we build a grid search pipeline using `GridSearchCV` to obtain an optimized version of `AdaBoostClassifier`, the algorithm we chose to use for our model. We chose Adaboost because by default it's a non-linear model, and we strongly believe that due to the number of features and the number of observations in the dataset, the decision boundary will be non-linear. Adaboost is also an ensemble algorithm, so it tends to outperform other simpler algorithms, which is another reason we chose to use it. 
 
 The `GridSearchCV` takes some time to run, but finally outputs our optimized classifier, which has parameters: `n_estimators: ` and `learning_rate: `.
+
+```python
+# Basic cross-validation with Grid Search CV
+AdaModel = AdaBoostClassifier()
+parameters = {
+    'n_estimators': range(50, 200, 50),
+    'learning_rate': np.arange(0.01, 0.09, 0.01)
+}
+clf = GridSearchCV(
+    AdaModel,
+    parameters,
+    n_jobs=-1,
+    verbose=20,
+    cv=KFold(2, shuffle=True),
+    scoring=make_scorer(accuracy_score))
+clf.fit(X_train, y_train)
+```
+![train2](images/image2.png)
+
+```python
+y_pred = clf.predict(X_train)
+print(accuracy_score(y_train, y_pred))
+```
+1.0
+
+![train3](images/image3.png)
 
 This optimized model gives us training accuracy of `x.x`, and test set accuracy of `x.x`. What this means is that on the training set, the model learns how to perfectly distinguish between tracks which should belong to a playlist and tracks which should not belong to a playlist. However, on the test set, the model is still doing some errors. Looking at the model's performance on the test set, we thought this was good enough, and decided to proceed to using the algorithm to actually recommend songs, and obtain an `r_precision` score on our recommender model. How we do this exactly is explained in the next section, `model-testing-and-results.md`.
