@@ -25,7 +25,10 @@ R-Precision Metric = *(Intersection of Prediction and Truth) / (Truth)* , where 
 R-Precision is a reasonable metric because it has a simple formula that makes for easy interpretability and it also allows us to compare to the scores acheived in the Spotify MPD Competition.  However, we also wanted another metric that was engaging.
 
 ## Our Second Metric:  See Top 10 Recommendations for a Given Playlist
-Of course we also added functionality in the testing phase so that we could inspect predictions being made for any given `playlist_pid` and see for ourselves if the recommendations are complimentary.  We also have the following function which allows us to create our own playlist and append it to the main dataframe:
+Naturally we also added functionality in the testing phase so that we could inspect predictions being made for any given `playlist_pid` and see for ourselves if the recommendations are complimentary.  
+
+### Creating our own playlists and getting recommendations
+We also have the following function which allows us to create our *own* playlist and append it to the main dataframe:
 
 ```python
 def create_my_playlist(songs: list, name: string, description: string):
