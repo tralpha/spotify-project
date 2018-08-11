@@ -11,7 +11,9 @@
 [Conclusion and What's Next](https://tralpha.github.io/spotify-project/conclusion.html) <br>
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
-# Million Playlist Dataset:
+# Data Description
+
+## Million Playlist Dataset:
 This dataset contains 5.4 GB of data and was created in 2017. It contains the following information for each playlist and track within:
 
 
