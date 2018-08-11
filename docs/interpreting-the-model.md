@@ -33,6 +33,7 @@ for f in range(50):
 ```
 
 2. **We reformat some of the earlier dataframes to lowercase strings and define a function get_translation that will help convert uri features that are in our sparse matrix to the artists, albums and tracks that they represent, in plain english.**
+
 ```python
 #helper in getting top features and making visual
 #convert relevant dataframe columns to lowercase so we can compare with top feature output
@@ -64,6 +65,7 @@ def get_translation(uri_type, uri):
 ```
 
 3. **We loop through the top 50 feature indices in the sparse matrix that vectorizer created to get those features and then translate them into readable english rather than numerical id information.**
+
 ```python
 #Make list of top features
 feature_names = []
@@ -83,6 +85,7 @@ for i in top50index:
 ```
 
 4. **We plot the most important features for visual insight into how our Ada model works.**
+
 ```python
 #plot
 
@@ -130,6 +133,7 @@ for feature in feature_names:
         not_pid_importances.append(top50importance[idx])
 ```
 **Plot**
+
 ```python
 #plot important features except for playlist_pid
 fig, ax = plt.subplots(1,1, figsize = (20,15))
