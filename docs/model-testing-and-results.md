@@ -66,6 +66,7 @@ Our mean `r_precision` returns at about `0.12`. This means that out of 25 ground
 ## Predictions for a Single Playlist
 
 ### A function to get top 10 predictions for a particular playlist name
+**This function is similar to the one used for computing r-precision with the functionality to return the top 10 predictions**
 ```python
 def get_track_predictions(playlist_name, top_tracks=10):
     """
@@ -107,3 +108,8 @@ def get_track_predictions(playlist_name, top_tracks=10):
 get_track_predictions('Throwbacks', top_tracks=10)
 ```
 ![predictions](images/track_predictions.png)
+
+## Conclusion
+The predictions that we get for the playlist "throwbacks" are very reasonable!  AdaBoost is suggesting songs that are popular among playlists found in MPD.  The songs roughly fit the genres and moods found in "throwbacks".  Perhaps the playlist name played a role in predicting the Red Hot Chilli Peppers song 'Scar Tissue', a throwback to what you might have heard on the radio on the way to the beach in 1999!  The song 'Closer' by the artist Ne-Yo that was predicted to match is a direct hit: it is in "throwbacks" in the training set.
+
+We are **excited** to use our model to get suggestions for our *own* playlists, and we have a function that is ready for us to add playlists to the dataset in the future.  See [Metrics](https://tralpha.github.io/spotify-project/metrics.html) for that function.
