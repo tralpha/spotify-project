@@ -17,6 +17,7 @@
 ### Building Feature Importance Visualization from AdaBoostClassifier Model
 
 1. **We extract top 50 feature indices and importance levels from Ada's feature_importances attribute**
+
 ```python
 # Get important features
 # Get top feature indices and ratings
