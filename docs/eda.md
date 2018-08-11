@@ -18,6 +18,7 @@ The data that we have is a trove of information.  The MPD is over 5 gigs of json
 It took some time and effort to vectorize the textual information in the dataset and to manage the sparse matrices that result.  In initially considerations about how a decision tree classifier might work on just the quantitative data, track length seemed to have some potential in descriminating songs that fit a playlist from those that don't.  We wondered, given a playlist, what the standard deviation of song duration might look like. If we find that this deviation for playlists tends to be very low, it could give us evidence that song duration is a significant feature. In order to better understand what standard deviation should be considered low, we start by noting that the average track duration across our entire subset of playlists is about 3.9 minutes with a standard deviation of about 1.4 minutes.  Below is plotted the distribution of stds for real (human generated) playlists in our dataset, playlists with many followers and playlists that we randomly generated; see [Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html):
 
 ## Exploration of the track_duration feature:
+**Get Stats**
 
 ```python
 # get lists of standard deviations of song length for each playlist for playlists 
@@ -57,7 +58,7 @@ for tup, df in tqdm(dataset.groupby(["playlist_pid", "match"])):
         neg_match_stds[index] = deviation
         neg_match_ratio[index] = ratio
  ```
- 
+ **Plot**
  ```python
 #Create boxplots and display
 fig, ax = plt.subplots(1,1, figsize = (17, 10))
