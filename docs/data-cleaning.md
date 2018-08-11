@@ -210,3 +210,9 @@ def word_cleanup(df_col):
 playlist_df.playlist_description = word_cleanup(playlist_df.playlist_description)
 playlist_df.playlist_name = word_cleanup(playlist_df.playlist_name)
 ```
+
+First 10 playlist names and descriptions before clean up
+![fig1](images/playlist_name_original.png)
+
+First 10 playlist names and descriptions after clean up
+![fig1](images/playlist_name_cleaned.png)
