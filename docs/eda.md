@@ -89,9 +89,9 @@ We find that when people create playlists (bottom and middle whisker plots) they
 ## The most common words in playlist names and descriptions
 We cleaned up the playlist names and descriptions as part of the [Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html). We have looked at the top playlist names in the [Data Description](https://tralpha.github.io/spotify-project/data-description.html). 
 
-We now go one step further and we analyse the frequency of individual words in playlist names.
+We now go one step further and we analyze the frequency of individual words in playlist names.
 
-**The top 100 words for playlist names seem to be categorical in nature as well**
+**The top 100 words for playlist names seem to be categorical in nature**
 <br>
 <br>
 ![fig2](images/playlist_name_top_100_words.png)
