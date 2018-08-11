@@ -116,6 +116,31 @@ As with artists, some of the most popular playlist names such as 'country', 'chr
 
 Playlist pid is central to our vision for how our Ada model works, since playlist pid uniquely identifies each playlist.  By splitting on playlist pid, AdaBoost can take into account which playlist it is considering when assigning a probability to whether a particular song matches that playlist.  
 
+### Building Feature Importance Visualization that Neglects `playlist_pid` and `track_duration` to get a clearer picture of the other features.
+
+```python
+#Check for relevant features besides playlist_pid numbers
+not_pid_features = []
+not_pid_importances = []
+for feature in feature_names:
+    if "playlist_pid" not in feature:
+        not_pid_features.append(feature)
+        idx = feature_names.index(feature)
+        not_pid_importances.append(top50importance[idx])
+```
+**Plot**
+```python
+#plot important features except for playlist_pid
+fig, ax = plt.subplots(1,1, figsize = (20,15))
+y_pos = np.arange(len(not_pid_features) - 3)
+ax.barh(not_pid_features[3:], not_pid_importances[3:], align = "center", color = "mediumspringgreen")
+for tick in ax.get_xticklabels():
+    tick.set_rotation(90)
+ax.set_xlabel("Importance", fontsize = 20)
+ax.set_ylabel("Features", fontsize = 20)
+```
+![feat2](images/features_2.png)
+
 ### Conclusions
 
 To expand on our recommendation system, we would benefit from features that are more powerful in the way they discriminate between songs that match and playlist and songs that don't.  We could explore other quantitative features such as average tempo or loudness of songs in a playlist.  Our model could also gain much classification ability by having more features related to mood, atmosphere and purpose since playlist names that indicated these things were useful.  It will be exciting to see how much better playlist continuations systems get as more relevant data comes online that is either quantitative or ,if categorical, is limited to a small number of categories, unlike artist.
