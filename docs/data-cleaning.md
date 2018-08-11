@@ -199,6 +199,7 @@ data_train, data_test, y_train, y_test = train_test_split(
 <br>
 We vectorize the data on things like album, artist, artist, playlist. For the playlist name and the desciption we use a word vectorizer.
 <br>
+
 ```python
 # we need a custom pre-processor to extract correct field,
 # but want to also use default scikit-learn preprocessing (e.g. lowercasing)
@@ -263,9 +264,11 @@ vectorizer = FeatureUnion([
      ItemSelector(list(dataset.columns).index('track_duration_ms'))),
 ])
 X_train = vectorizer.fit_transform(data_train.values)
+
 ```
 
 ```python
+
 class ItemSelector(BaseEstimator, TransformerMixin):
     """For data grouped by feature, select subset of data at a provided key.
 
@@ -307,4 +310,5 @@ class ItemSelector(BaseEstimator, TransformerMixin):
 
     def get_feature_names(self):
         return [dataset.columns[self.key]]
+        
 ```
