@@ -319,7 +319,7 @@ X_train = vectorizer.fit_transform(data_train.values)
 X_test = vectorizer.transform(data_test.values)
 ```
 
-![train1](images/xtrainshape.png)
+![train1](images/image1.png)
 ![train1.1](images/test_shape.png)
 
 ```python
@@ -338,7 +338,7 @@ clf = GridSearchCV(
     scoring=make_scorer(accuracy_score))
 clf.fit(X_train, y_train)
 ```
-![train2](images/best_params.png)
+![train2](images/image2.png)
 
 ```python
 y_pred = clf.predict(X_train)
@@ -346,4 +346,4 @@ print(accuracy_score(y_train, y_pred))
 ```
 1.0
 
-![train3](images/training_results.png)
+![train3](images/image3.png)
