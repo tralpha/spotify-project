@@ -139,6 +139,7 @@ for tick in ax.get_xticklabels():
 ax.set_xlabel("Importance", fontsize = 20)
 ax.set_ylabel("Features", fontsize = 20)
 ```
+**Important Playlist Names and Artists**
 ![features_2](images/features_2.png)
 
 ### Conclusions
