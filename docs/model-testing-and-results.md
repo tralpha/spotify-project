@@ -60,6 +60,50 @@ for pid, df in pbar:
     pbar.set_description("{}".format(np.mean(r_precisions)))
 ```
 
-## Results
+## R-Precision Results
 Our mean `r_precision` returns at about `0.12`. This means that out of 25 ground truth songs, 3 will be present in the top 25 predictions. We did some sanity checking to see how our model is doing compared to other Spotify RecSys Challenge participants and see that the best model had an `r_precision` of `0.224656`, where they used the entire dataset.  
 
+## Predictions for a Single Playlist
+
+### A function to get top 10 predictions for a particular playlist name
+```python
+def get_track_predictions(playlist_name, top_tracks=10):
+    """
+    Function to get track predictions for a single playlist
+    playlist_name should be in the form of a string.
+    """
+    for pid, df in pbar:
+        p_info = df[playlist_df.columns].iloc[0]
+        if p_info.playlist_name == playlist_name: 
+            labels = y_test.loc[df.index]
+
+            # Positive Tracks
+            positive_tracks_idx = labels[labels == 1].index
+            positive_tracks = data_test.loc[positive_tracks_idx]
+            sp_positive_tracks = vectorizer.transform(positive_tracks.values)
+
+            # Negative Tracks
+            negative_tracks_idx = ~np.isin(data_test.index, positive_tracks_idx)
+            negative_tracks = data_test[negative_tracks_idx].drop(
+                playlist_df.columns, axis=1)
+            negative_playlist = np.array([p_info.values] * len(negative_tracks))
+            negative_playlist_samples = np.hstack([negative_tracks, negative_playlist])
+            sp_negative_tracks = vectorizer.transform(negative_playlist_samples)
+            # from IPython.core.debugger import set_trace; set_trace()
+
+            # Test Tracks
+            test_tracks = vstack([sp_negative_tracks, sp_positive_tracks])
+            index_order = negative_tracks.index.append(positive_tracks_idx)
+
+            # Predict, r_precision
+            y_prob = AdaModel.predict_proba(test_tracks)
+            # from IPython.core.debugger import set_trace; set_trace()
+            y_pred = np.argsort(-y_prob[:,1])
+            best_pred = index_order[y_pred]
+            if len(positive_tracks_idx) > 0:
+                print(r_precision(positive_tracks_idx, best_pred))
+                print(data_test.loc[best_pred[:10]].loc[:,['track_artist_name','track_name']])
+            break
+get_track_predictions('Throwbacks', top_tracks=10)
+```
+![predictions](images/track_predictions.png)
