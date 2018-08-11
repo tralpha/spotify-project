@@ -12,8 +12,22 @@
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 
+# Training the Model
 
-This merged dataframe is split into a training and test set using the `sklearn` `train_test_split` function. Because we have a large dataset, we choose to reserve 10% of our dataset for testing purposes. 
+## Train / Test Split
+This merged dataframe is split into a training and test set using the `sklearn` `train_test_split` function. Because we want our model to be able to generalize we choose a 70-30% train-test split.
+
+```python
+data_x = dataset.loc[:, dataset.columns != 'match']
+data_y = dataset.match
+data_train, data_test, y_train, y_test = train_test_split(
+    data_x,
+    data_y,
+    test_size=0.3,
+    stratify=dataset[['playlist_pid', 'match']],
+    random_state=42,
+    shuffle=True)
+```
 
 This train dataframe (called `data_train` in code) is then vectorized to obtain features to be trained using our model. We vectorize because our algorithm cannot be ran directly on text, so we need to extract features before training. We do the feature extraction using a `FeatureUnion` class from sklearn, which concatenates together binary features from different main text features, from the original merged dataset. The feature we consider for the problem are:
 
