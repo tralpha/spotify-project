@@ -18,7 +18,7 @@ Ralph Tigoumo, Fredrik Karlsson Peraldi and John Daciuk
 With music streaming services, many of us have access to more music than we'll ever have time to explore on our own.  We build a system that can recommend new songs that will likely be compelling to a user.  A playlist that the user has already created will be used as ground truth for the user's taste in music.
 
 ## Goals:
-1. Given a playlist from Spotify's Million PLaylist Dataset as input, output a list of tracks that will be welcomed additions for continuing that playlist.
+1. Given a playlist from Spotify's Million Playlist Dataset as input, output a list of tracks that will be reasonable additions for continuing that playlist.
 
 2. Measure an R-Precision score that can give quantitative data indicating how our system compares to the state of the art and confirm that our model has successfully learned trends in the training data that generalize.
 
