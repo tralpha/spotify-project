@@ -89,6 +89,6 @@ As described in the [Data Description](https://tralpha.github.io/spotify-project
 
 We now go one step further and we analyse the frequency of individual words in playlist names.
 
-```python
+![fig2](images/playlist_length_devs.png)
 
-```
+![fig3](images/playlist_length_devs.png)
