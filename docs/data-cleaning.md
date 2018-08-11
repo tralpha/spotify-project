@@ -131,7 +131,7 @@ playlist_map_df.tail()
 <img src="images/playlist_map_df.png" width="440">
 
 ## Negative Samples
-**Here we first refer to our response variable "Match" which will be frequently referenced in our reporting**
+**Here we first refer to our response variable "Match" which will be frequently referenced in our reporting:**
 <br>
 In order to train our model we also need a negative sample set. We will add random songs to each playlist. We add a binary value called `match` which is used as the response variable for the model.<br>
 
@@ -211,7 +211,7 @@ playlist_df.playlist_description = word_cleanup(playlist_df.playlist_description
 playlist_df.playlist_name = word_cleanup(playlist_df.playlist_name)
 ```
 
-Only 1.9% of playlists have desceriptions so when listing the first 10 playlists all descriptions are empty.<br>
+Only 1.9% of playlists have descriptions so when listing the first 10 playlists all descriptions are empty.<br>
 
 **First 10 playlist names and descriptions before clean up**
 <br>
