@@ -178,3 +178,35 @@ We merge the two datasets together:
 ```python
 dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid']).reset_index(drop=True)
 ```
+
+## Using playlist name and description as a proxy for song meta-data
+As described in the [Data Description](https://tralpha.github.io/spotify-project/data-description.html) we have chosen not to include the Million Song Dataset (MSD) as we believe we can extract meta-data on songs from the playlist name and the description. We show the the top 30 playlist names, all those playlists are single word playlists name and their names are indeed categorical like: rock, chill, country etc.
+
+In order to ease the word vectorization we clean up the playlist names and the descriptions by removing stop words and we set everything to lowercase. We also remove the types of words we see often in playlist names like: "playlist", "favorites", "tunes", "good, "mix" etc. We do not think these words add any value for categorizing the songs.
+
+```python
+import nltk
+import string
+from nltk.corpus import stopwords
+stop = stopwords.words('english')
+ignored_words = [
+    'music', 'songs', 'playlist', 'good', 'jams', 'mix', 'lit', 'best',
+    'stuff', 'quot', 'like', 'one', 'amp', 'get', 'make', 'new', 'know',
+    'really', 'back', 'day', 'days', 'little', 'things', 'great', 'everything',
+    'jamz', 'tunes', 'artist', 'song', 'top', 'listen', 'favorite', 'bops',
+    'description', 'top', 'ever', 'mostly', 'enjoy', 'bunch', 'track',
+    'tracks', 'collection', 'need', 'every', 'favorites', 'may', 'got',
+    'right', 'let', 'better', 'made'
+]
+
+def word_cleanup(df_col):
+    df_col = df_col.apply(lambda x: x.lower())
+    df_col = df_col.str.replace('[^a-z]+', ' ')
+    df_col = df_col.apply(lambda x: ' '.join([word for word in x.split() if word not in (stop)]))
+    df_col = df_col.apply(lambda x: ' '.join([word for word in x.split() if word not in (ignored_words)]))
+    df_col = df_col.str.replace(r'\b\w{1,2}\b', '').str.replace(r'\s+', ' ')
+    return df_col
+
+playlist_df.playlist_description = word_cleanup(playlist_df.playlist_description)
+playlist_df.playlist_name = word_cleanup(playlist_df.playlist_name)
+```
