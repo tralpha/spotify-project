@@ -8,7 +8,7 @@
 [Model Training](https://tralpha.github.io/spotify-project/model-training.html) <br>
 [Interpreting the Model](https://tralpha.github.io/spotify-project/interpreting-the-model.html) <br>
 [Model Testing and Results](https://tralpha.github.io/spotify-project/model-testing-and-results.html) <br>
-[Conclusion and What's Next](https://tralpha.github.io/spotify-project/whats_next.html) <br>
+[Conclusion and What's Next](https://tralpha.github.io/spotify-project/conclusion.html) <br>
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 # Data Cleaning:
