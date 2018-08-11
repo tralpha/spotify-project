@@ -1,4 +1,6 @@
-# What's Next?
+# Conclusion and What's Next?
+
+## Conclusion
 
 ### Working with 1,000,000 Playlists
 One idea we could use to better handle computing on the full dataset is principal component analysis.  By narrowing down our set of features we could train models faster and experiment more with model tuning.  We did create a visualization to see how we can differentiate between `match = 0` and `match = 1` tracks using the first 2 principal components.  We can see that even just two components with 41,000 playlists loaded start to discriminate between our two target categories.  It would be fascinating to think more about how this works and what the right number of components would be for an accurate model that is also easier to train on a large percentage of the data.
