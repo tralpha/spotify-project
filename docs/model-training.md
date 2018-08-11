@@ -24,7 +24,7 @@ data_train, data_test, y_train, y_test = train_test_split(
     data_x,
     data_y,
     test_size=0.3,
-    stratify=dataset[['playlist_pid', 'match']],
+    stratify=dataset.playlist_pid,
     random_state=42,
     shuffle=True)
 ```
