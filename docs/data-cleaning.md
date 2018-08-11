@@ -191,6 +191,159 @@ data_train, data_test, y_train, y_test = train_test_split(
     random_state=42,
     shuffle=True)
 ```
-
+---
 ## Vectorizing the Data to Extract Word Features and One Hot Encode Categoricals
-In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes.  
+In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes. 
+
+```python
+class ItemSelector(BaseEstimator, TransformerMixin):
+    """For data grouped by feature, select subset of data at a provided key.
+
+    The data is expected to be stored in a 2D data structure, where the first
+    index is over features and the second is over samples.  i.e.
+
+    >> len(data[key]) == n_samples
+
+    Please note that this is the opposite convention to scikit-learn feature
+    matrixes (where the first index corresponds to sample).
+
+    ItemSelector only requires that the collection implement getitem
+    (data[key]).  Examples include: a dict of lists, 2D numpy array, Pandas
+    DataFrame, numpy record array, etc.
+
+    >> data = {'a': [1, 5, 2, 5, 2, 8],
+               'b': [9, 4, 1, 4, 1, 3]}
+    >> ds = ItemSelector(key='a')
+    >> data['a'] == ds.transform(data)
+
+    ItemSelector is not designed to handle data grouped by sample.  (e.g. a
+    list of dicts).  If your data is structured this way, consider a
+    transformer along the lines of `sklearn.feature_extraction.DictVectorizer`.
+
+    Parameters
+    ----------
+    key : hashable, required
+        The key corresponding to the desired value in a mappable.
+    """
+    def __init__(self, key):
+        self.key = key
+
+    def fit(self, x, y=None):
+        return self
+
+    def transform(self, data_dict):
+        # if self.key == 'playlist_pid': from IPython.core.debugger import set_trace; set_trace()
+        return data_dict[:,[self.key]].astype(np.int64)
+
+    def get_feature_names(self):
+        return [dataset.columns[self.key]]
+```
+
+```python
+# we need a custom pre-processor to extract correct field,
+# but want to also use default scikit-learn preprocessing (e.g. lowercasing)
+default_preprocessor = CountVectorizer().build_preprocessor()
+
+
+def build_preprocessor(field):
+    field_idx = list(dataset.columns).index(field)
+    # if field == 'playlist_pid': from IPython.core.debugger import set_trace; set_trace()
+    return lambda x: default_preprocessor(x[field_idx])
+
+
+vectorizer = FeatureUnion([
+    (
+        'track_artist_uri',
+        CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r".+",
+            stop_words=None,
+            # max_features=50000,
+            preprocessor=build_preprocessor('track_artist_uri'))),
+    (
+        'track_album_uri',
+        CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r".+",
+            stop_words=None,
+            # max_features=50000,
+            preprocessor=build_preprocessor('track_album_uri'))),
+    (
+        'track_uri',
+        CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r".+",
+            stop_words=None,
+            # max_features=50000,
+            preprocessor=build_preprocessor('track_uri'))),
+
+    (
+        'playlist_pid',
+        CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r".+",
+            stop_words=None,
+            # max_features=50000,
+            preprocessor=build_preprocessor('playlist_pid'))),
+
+    ("playlist_name",
+      CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r"(?u)\b\w+\b",
+            stop_words=None,
+            analyzer = 'word',
+            # max_features=50000,
+            preprocessor=build_preprocessor("playlist_name"))),
+    
+    ("playlist_description",
+      CountVectorizer(
+            ngram_range=(1, 1),
+            token_pattern=r"(?u)\b\w+\b",
+            stop_words=None,
+            analyzer = 'word',
+            # max_features=50000,
+            preprocessor=build_preprocessor("playlist_description"))),
+#     (
+#         'track_pos',
+#         CountVectorizer(
+#             ngram_range=(1, 1),
+#             token_pattern=r".+",
+#             stop_words=None,
+#             # max_features=50000,
+#             preprocessor=build_preprocessor('track_pos'))),
+
+    ('track_duration_ms',
+     ItemSelector(list(dataset.columns).index('track_duration_ms'))),
+])
+X_train = vectorizer.fit_transform(data_train.values)
+X_test = vectorizer.transform(data_test.values)
+```
+
+![train1](images/xtrainshape.png)
+![train1.1](images/test_shape.png)
+
+```python
+# Basic cross-validation with Grid Search CV
+AdaModel = AdaBoostClassifier()
+parameters = {
+    'n_estimators': range(50, 200, 50),
+    'learning_rate': np.arange(0.01, 0.09, 0.01)
+}
+clf = GridSearchCV(
+    AdaModel,
+    parameters,
+    n_jobs=-1,
+    verbose=20,
+    cv=KFold(2, shuffle=True),
+    scoring=make_scorer(accuracy_score))
+clf.fit(X_train, y_train)
+```
+![train2](images/best_params.png)
+
+```python
+y_pred = clf.predict(X_train)
+print(accuracy_score(y_train, y_pred))
+```
+1.0
+
+![train3](images/training_results.png)
