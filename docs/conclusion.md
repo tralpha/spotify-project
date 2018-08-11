@@ -15,7 +15,7 @@
 # Conclusion and What's Next?
 
 ## Conclusion
-We are far from cutting edge results, but we built a system that returns reasonable results and is close in `r-precision` to some teams on the Spotify MPD Competition site: [see here](https://recsys-challenge.spotify.com/static/final_main_leaderboard.html).
+We have far from cutting edge results, but we built a system that returns reasonable results and is close in `r-precision` to some teams on the Spotify MPD Competition site: [see here](https://recsys-challenge.spotify.com/static/final_main_leaderboard.html).
 
 We gained experience working with a large dataset in which observations are largely categorical text data.  We have gleaned insight into what happens on Spotify servers when we load up this week's 'Your Discovered Weekly' and hit play.  More broadly, we have enaged with the inner working of technology that for most people *just works*.
 
@@ -60,7 +60,7 @@ plt.legend();
 With more time we could split our data into a 60-20-20% train-validation-test split and really dig into discovering the best hyperparameters.  We could get further intuition for AbaBoost and ground our parameter decisions by visualizing how test performance varies by number of estimators and depth of tree.
 
 ### More Models
-We would love to try more models and possibly even experiment with stacking them.  It was an ensemble method that won the famous Netflix Competition, and stacking has proven itself time and again since for some of the most difficult classification tasks.  Perhaps we could find the faults with AdaBoost for this task and discover other models that compliment its weaknesses.  It will be particularly instructive to see how neural networks could handle the MPD.
+We would love to try more models and possibly even experiment with stacking them.  It was an ensemble method that won the famous Netflix Competition, and stacking has proven itself time and again since for some of the most difficult classification tasks.  Perhaps we could find the faults with AdaBoost for this task and discover other models that compliment its weaknesses.  It will be particularly instructive to see how neural networks could handle the MPD.  We've also heard wonderful things about the potential of XGBoost and CatBoost so we will explore.
 
 ### Taking advantage of the Million Song Dataset
 The MSD holds song specific feature information that would be useful for a model to be able to further recognize similarities between songs and recommend songs to a user that exhibit the qualities that user indicates they like by the name and description of their playlist, as well as the songs they already added.
