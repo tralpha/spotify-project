@@ -11,6 +11,9 @@
 [Conclusion and What's Next](https://tralpha.github.io/spotify-project/conclusion.html) <br>
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
+### Authors
+Ralph Tigoumo, Fredrik Karlsson Peraldi and John Daciuk
+
 # Project Statement:
 With music streaming services, many of us have access to more music than we'll ever have time to explore on our own.  We build a system that can recommend new songs that will likely be compelling to a user.  A playlist that the user has already created will be used as ground truth for the user's taste in music.
 
