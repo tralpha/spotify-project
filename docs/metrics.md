@@ -31,7 +31,8 @@ Of course we also added functionality in the testing phase so that we could insp
 def create_my_playlist(songs: list, name: string, description: string):
     my_playlist = pd.DataFrame()
     for song in songs:
-        # Append to new playlist the song as it first appears in the main dataframe merged along with its meta information
+        # Append to new playlist the song as it first appears in the main dataframe merged 
+        # along with its meta information
         my_playlist = my_playlist.append(merged.loc[merged.track_name == song].iloc[0][tracks_df.columns.append(pd.Index(["track_uri"]))])
     
     # Fill in playlist meta info for all newly added songs
