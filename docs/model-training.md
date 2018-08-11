@@ -12,7 +12,7 @@
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 
-# Training the Model
+# Model Training
 
 ## Train / Test Split
 This merged dataframe is split into a training and test set using the `sklearn` `train_test_split` function. Because we want our model to be able to generalize we choose a 70-30% train-test split.
