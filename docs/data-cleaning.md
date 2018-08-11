@@ -5,6 +5,7 @@
 [EDA](https://tralpha.github.io/spotify-project/eda.html) <br>
 [Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
 [Metrics](https://tralpha.github.io/spotify-project/metrics.html) <br>
+[Data Cleaning](https://tralpha.github.io/spotify-project/data-cleaning.html) <br>
 [Model Training](https://tralpha.github.io/spotify-project/model-training.html) <br>
 [Interpreting the Model](https://tralpha.github.io/spotify-project/interpreting-the-model.html) <br>
 [Model Testing and Results](https://tralpha.github.io/spotify-project/model-testing-and-results.html) <br>
@@ -173,7 +174,20 @@ negative_samples['match'] = 0
 merged['match'] = 1
 ```
 
-Finally, we merge the two datasets together:
+We merge the two datasets together:
 ```python
 dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid']).reset_index(drop=True)
+```
+
+The data is split into a train and a test set using a 70/30 split. We want equal ratios of songs from the playlists and also positive/negative samples in the two groups. We can achieve this by using the stratify parameter on the train_test_split:
+```python
+data_x = dataset.loc[:, dataset.columns != 'match']
+data_y = dataset.match
+data_train, data_test, y_train, y_test = train_test_split(
+    data_x,
+    data_y,
+    test_size=0.3,
+    stratify=dataset[['playlist_pid', 'match']],
+    random_state=42,
+    shuffle=True)
 ```
