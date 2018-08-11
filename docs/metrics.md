@@ -28,3 +28,32 @@ R-Precision is a reasonable metric because it has a simple formula that makes fo
 Of course we also added functionality in the testing phase so that we could inspect predictions being made for any given `playlist_pid` and see for ourselves if the recommendations are complimentary.  We have the following function which allows us to create our own playlist and append it to the main dataframe:
 
 ```python
+def create_my_playlist(songs: list, name: string, description: string):
+    my_playlist = pd.DataFrame()
+    for song in songs:
+        # Append to new playlist the song as it first appears in the main dataframe merged along with its meta information
+        my_playlist = my_playlist.append(merged.loc[merged.track_name == song].iloc[0]           [tracks_df.columns.append(pd.Index(["track_uri"]))])
+    
+    # Fill in playlist meta info for all newly added songs
+    playlist_info = pd.DataFrame(columns = list(playlist_df.columns))
+    playlist_info["playlist_collaborative"] = pd.Series("false")
+    playlist_info["playlist_description"] = description
+    playlist_info["playlist_modified_at"] = 1496793600
+    playlist_info["playlist_name"] = name
+    playlist_info["playlist_num_edits"] = 1
+    playlist_info["playlist_num_followers"] = 1
+    playlist_info["playlist_pid"] = np.max(merged.playlist_pid) + 1
+    playlist_info["playlist_num_artists"] = my_playlist["track_artist_uri"].nunique()
+    playlist_info["playlist_num_tracks"] = len(my_playlist)
+    playlist_info["playlist_duration_ms"] = np.sum(my_playlist["track_duration_ms"])
+    playlist_info["playlist_num_albums"] = my_playlist["track_album_uri"].nunique()
+    playlist_info = pd.concat([playlist_info] * len(songs))
+    playlist_info.index = list(my_playlist.index)
+    
+    # Concat new song playlist track df with playlist specific columns
+    result_df =  pd.concat([my_playlist, playlist_info], axis=1)
+    result_df.index = range(len(merged), len(merged) + len(songs))
+    
+    #Return new playlist dataframe which can now be appended to the main MPD dataframe we are working with
+    return result_df
+```
