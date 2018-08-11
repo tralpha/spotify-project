@@ -182,6 +182,7 @@ dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid'])
 ## Train and Test split
 <br>
 The data is split into a train and a test set using a 70/30 split. We want equal ratios of songs from the playlists and also positive/negative samples in the two groups. We can achieve this by using the stratify parameter on the train_test_split:
+<br>
 ```python
 data_x = dataset.loc[:, dataset.columns != 'match']
 data_y = dataset.match
@@ -189,12 +190,13 @@ data_train, data_test, y_train, y_test = train_test_split(
     data_x,
     data_y,
     test_size=0.3,
-    stratify=dataset[['playlist_pid', 'match']],
+    stratify=dataset.playlist_pid,
     random_state=42,
     shuffle=True)
 ```
 
 ## Vectorizing the data
+<br>
 We vectorize the data on things like album, artist, artist, playlist. For the playlist name and the desciption we use a word vectorizer.
 <br>
 ```python
@@ -261,4 +263,48 @@ vectorizer = FeatureUnion([
      ItemSelector(list(dataset.columns).index('track_duration_ms'))),
 ])
 X_train = vectorizer.fit_transform(data_train.values)
+```
+
+```python
+class ItemSelector(BaseEstimator, TransformerMixin):
+    """For data grouped by feature, select subset of data at a provided key.
+
+    The data is expected to be stored in a 2D data structure, where the first
+    index is over features and the second is over samples.  i.e.
+
+    >> len(data[key]) == n_samples
+
+    Please note that this is the opposite convention to scikit-learn feature
+    matrixes (where the first index corresponds to sample).
+
+    ItemSelector only requires that the collection implement getitem
+    (data[key]).  Examples include: a dict of lists, 2D numpy array, Pandas
+    DataFrame, numpy record array, etc.
+
+    >> data = {'a': [1, 5, 2, 5, 2, 8],
+               'b': [9, 4, 1, 4, 1, 3]}
+    >> ds = ItemSelector(key='a')
+    >> data['a'] == ds.transform(data)
+
+    ItemSelector is not designed to handle data grouped by sample.  (e.g. a
+    list of dicts).  If your data is structured this way, consider a
+    transformer along the lines of `sklearn.feature_extraction.DictVectorizer`.
+
+    Parameters
+    ----------
+    key : hashable, required
+        The key corresponding to the desired value in a mappable.
+    """
+    def __init__(self, key):
+        self.key = key
+
+    def fit(self, x, y=None):
+        return self
+
+    def transform(self, data_dict):
+        # if self.key == 'playlist_pid': from IPython.core.debugger import set_trace; set_trace()
+        return data_dict[:,[self.key]].astype(np.int64)
+
+    def get_feature_names(self):
+        return [dataset.columns[self.key]]
 ```
