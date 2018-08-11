@@ -90,9 +90,11 @@ We cleaned up the playlist names and descriptions as part of the [Data Cleaning]
 We now go one step further and we analyse the frequency of individual words in playlist names.
 
 The top 100 words for playlist names seem to be categorical in nature as well
+<br>
 ![fig2](images/playlist_name_top_100_words.png)
 
 The top 100 words for playlist descriptions are also categorical
+<br>
 ![fig3](images/playlist_description_top_100_words.png)
 
 So using the words in the playlist name and the descriptiondoes indeed seems like a good proxy for the song meta-data
