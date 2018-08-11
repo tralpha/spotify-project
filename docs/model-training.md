@@ -157,14 +157,6 @@ vectorizer = FeatureUnion([
             analyzer = 'word',
             # max_features=50000,
             preprocessor=build_preprocessor("playlist_description"))),
-#     (
-#         'track_pos',
-#         CountVectorizer(
-#             ngram_range=(1, 1),
-#             token_pattern=r".+",
-#             stop_words=None,
-#             # max_features=50000,
-#             preprocessor=build_preprocessor('track_pos'))),
 
     ('track_duration_ms',
      ItemSelector(list(dataset.columns).index('track_duration_ms'))),
