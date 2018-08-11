@@ -29,7 +29,10 @@ data_train, data_test, y_train, y_test = train_test_split(
     shuffle=True)
 ```
 
-This train dataframe (called `data_train` in code) is then vectorized to obtain features to be trained using our model. We vectorize because our algorithm cannot be ran directly on text, so we need to extract features before training. We do the feature extraction using a `FeatureUnion` class from sklearn, which concatenates together binary features from different main text features, from the original merged dataset. The feature we consider for the problem are:
+## Vectorizing the Data to Extract Word Features and One Hot Encode Categoricals
+This train dataframe (called `data_train` in code) is then vectorized to obtain features to be trained using our model.  In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes. 
+
+We do the feature extraction using a `FeatureUnion` class from sklearn, which concatenates together binary features from different main text features, from the original merged dataset. The feature we consider for the problem are:
 
 1. `track_artist_uri`
 2. `track_album_uri`
@@ -40,49 +43,6 @@ This train dataframe (called `data_train` in code) is then vectorized to obtain 
 7. `track_duration_ms`
 
 The vectorizer is fit on the training set, to obtain a big matrix of features, `X_train`. This `X_train` matrix contains about 106000 features when 2000 playlists are loaded, together with 241000 observations. We believe as more playlists are loaded, the observations to features ratio increases, which should make it easier for the algorithm to distinguish between positive and negative playlist+track concatenations after training.
-
-We then transform our `X_test` matrix to obtain a similar matrix, with the same number of features as the `X_train`. 
-
-
-
-After both the training and test matrices are obtained, we build a grid search pipeline using `GridSearchCV` to obtain an optimized version of `AdaBoostClassifier`, the algorithm we chose to use for our model. We chose Adaboost because by default it's a non-linear model, and we strongly believe that due to the number of features and the number of observations in the dataset, the decision boundary will be non-linear. Adaboost is also an ensemble algorithm, so it tends to outperform other simpler algorithms, which is another reason we chose to use it. 
-
-The `GridSearchCV` takes some time to run, but finally outputs our optimized classifier, which has parameters: `n_estimators: ` and `learning_rate: `.
-
-```python
-# Basic cross-validation with Grid Search CV
-AdaModel = AdaBoostClassifier()
-parameters = {
-    'n_estimators': range(50, 200, 50),
-    'learning_rate': np.arange(0.01, 0.09, 0.01)
-}
-clf = GridSearchCV(
-    AdaModel,
-    parameters,
-    n_jobs=-1,
-    verbose=20,
-    cv=KFold(2, shuffle=True),
-    scoring=make_scorer(accuracy_score))
-clf.fit(X_train, y_train)
-```
-![train2](images/image2.png)
-
-```python
-y_pred = clf.predict(X_train)
-print(accuracy_score(y_train, y_pred))
-```
-1.0
-
-![train3](images/image3.png)
-
-This optimized model gives us training accuracy of `x.x`, and test set accuracy of `x.x`. What this means is that on the training set, the model learns how to perfectly distinguish between tracks which should belong to a playlist and tracks which should not belong to a playlist. However, on the test set, the model is still doing some errors. Looking at the model's performance on the test set, we thought this was good enough, and decided to proceed to using the algorithm to actually recommend songs, and obtain an `r_precision` score on our recommender model. How we do this exactly is explained in the next section, `model-testing-and-results.md`.
-
-
-
-
-
-## Vectorizing the Data to Extract Word Features and One Hot Encode Categoricals
-In order to take advantage of our text features like playlist name and playlist description we use a text word count vectorizer.  By vectorizing we also make features such as `playlist_pid` categorical in nature.  Afterall, the order of `playlist_pid` in our dataset is meaningless for our purposes. 
 
 ```python
 class ItemSelector(BaseEstimator, TransformerMixin):
@@ -207,3 +167,42 @@ vectorizer = FeatureUnion([
 X_train = vectorizer.fit_transform(data_train.values)
 X_test = vectorizer.transform(data_test.values)
 ```
+![train1](images/image1.png)
+![train1.1](images/test_shape.png)
+
+We have also transformed our `X_test` matrix to obtain a similar matrix, with the same number of features as `X_train`. 
+
+
+## Cross Validation
+After both the training and test matrices are obtained, we build a grid search pipeline using `GridSearchCV` to obtain an optimized version of `AdaBoostClassifier`, the algorithm we chose to use for our model. We chose Adaboost because by default it's a non-linear model, and we strongly believe that due to the number of features and the number of observations in the dataset, the decision boundary will be non-linear. Adaboost is an ensemble algorithm, and so it tends to outperform other simpler algorithms, which is another reason we chose to use it. 
+
+The `GridSearchCV` takes some time to run, but finally outputs our optimized classifier, which has parameters: `n_estimators: ` and `learning_rate: `.
+
+```python
+# Basic cross-validation with Grid Search CV
+AdaModel = AdaBoostClassifier()
+parameters = {
+    'n_estimators': range(50, 200, 50),
+    'learning_rate': np.arange(0.01, 0.09, 0.01)
+}
+clf = GridSearchCV(
+    AdaModel,
+    parameters,
+    n_jobs=-1,
+    verbose=20,
+    cv=KFold(2, shuffle=True),
+    scoring=make_scorer(accuracy_score))
+clf.fit(X_train, y_train)
+```
+![train2](images/image2.png)
+
+```python
+y_pred = clf.predict(X_train)
+print(accuracy_score(y_train, y_pred))
+```
+1.0
+
+![train3](images/image3.png)
+
+## Training Results Summary
+This optimized model gives us training accuracy of `x.x`, and test set accuracy of `x.x`. What this means is that on the training set, the model learns how to perfectly distinguish between tracks which should belong to a playlist and tracks which should not belong to a playlist. However, on the test set, the model is still doing some errors. Looking at the model's performance on the test set, we thought this was good enough, and decided to proceed to using the algorithm to actually recommend songs, and obtain an `r_precision` score on our recommender model. How we do this exactly is explained in the next section, `model-testing-and-results.md`.
