@@ -12,7 +12,7 @@
 [Literature Review](https://tralpha.github.io/spotify-project/literature-review.html) <br>
 
 
-# Conclusion and What's Next?
+# Conclusion and What's Next
 
 ## Conclusion
 We have far from cutting edge results, but we built a system that returns reasonable results and is close in `r-precision` to some teams on the Spotify MPD Competition site: [see here](https://recsys-challenge.spotify.com/static/final_main_leaderboard.html).
