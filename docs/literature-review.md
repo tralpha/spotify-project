@@ -21,5 +21,7 @@ We considered the following papers in our research and brainstorming:
 
 These papers elucidate ideas in information retreival, natural language processing and metrics.  "Current Challenges and Visions" made of more aware of the academic state of recommendation systems for music.  It also prompted us to think about how other dimensions of data, like emotion and context will come to play a role in the future.
 
-The following youtube video was insightful in that it presents ideas that workers at Spotify are already putting into practice.
+The following youtube video was insightful in that it presents ideas that workers at Spotify are already putting into practice:
+<br>
+
 [Machine Learning & Big Data for Music Discovery presented by Spotify](https://youtu.be/HKW_v0xLHH4)
