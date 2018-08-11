@@ -183,6 +183,7 @@ dataset = pd.concat([negative_samples, merged]).sort_values(by=['playlist_pid'])
 <br>
 The data is split into a train and a test set using a 70/30 split. We want equal ratios of songs from the playlists and also positive/negative samples in the two groups. We can achieve this by using the stratify parameter on the train_test_split:
 <br>
+
 ```python
 data_x = dataset.loc[:, dataset.columns != 'match']
 data_y = dataset.match
