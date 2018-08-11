@@ -91,7 +91,7 @@ class ItemSelector(BaseEstimator, TransformerMixin):
 ```
 
 
-**Uniting the feature into a massive matrix that will hold quantitative features as well as categorical 'one hot encoded' features.**
+**Uniting the features into a massive matrix that will hold quantitative features as well as categorical 'one hot encoded' features.**
 
 ```python
 # we need a custom pre-processor to extract correct field,
