@@ -1,4 +1,4 @@
-## Table of Contents
+### Table of Contents
 [Project Statement and Goals](https://tralpha.github.io/spotify-project/project-statement-and-goals.html) <br>
 [Motivation and Background](https://tralpha.github.io/spotify-project/motivation-and-background.html) <br>
 [Data Description](https://tralpha.github.io/spotify-project/data-description.html) <br>
