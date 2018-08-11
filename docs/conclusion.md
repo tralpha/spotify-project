@@ -15,7 +15,7 @@
 # Conclusion and What's Next?
 
 ## Conclusion
-We are far from cutting edge results, but we built a system that returns reasonable results and is close in `r-precision` to some teams on the Spotify MPD Competition site ([see here](https://recsys-challenge.spotify.com/static/final_main_leaderboard.html)
+We are far from cutting edge results, but we built a system that returns reasonable results and is close in `r-precision` to some teams on the Spotify MPD Competition site ([see here])(https://recsys-challenge.spotify.com/static/final_main_leaderboard.html).
 
 We gained experience working with a large dataset in which observations are largely categorical text data.  We have gleaned insight into what happens on Spotify servers when we load up this week's 'Your Discovered Weekly' and hit play.  More broadly, we have enaged with the inner working of technology that for most people *just works*.
 
