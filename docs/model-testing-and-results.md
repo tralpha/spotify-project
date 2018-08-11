@@ -22,7 +22,9 @@ The above caveat beside, when 2000 playlists were loaded, there were still about
 
 For every playlist, we predict track membershp for the 26000 test set tracks. Runtime is slow; one potential improvement could be vectorizing the pipeline rather than using a `for` loop. 
 
-## Test Code
+After prediction, we ranked the tracks by probabilities of `match = 1`.  We calculate the `r_precision` metric with the *ground truth* tracks which we reserved for training. On average, playlists have about 66 tracks, so about 20 tracks will be reserved for the testing pipeline to calculate the `r_precision`. The task for AdaBoost is not a trivial one: out of 26000 tracks (using 2000 playlists), can the model rank the tracks by probability, such that the *ground truth* tracks present in the test set (which the algorithm didn't see before) are ranked first?
+
+## Code to test AdaBoost and Return R-Precision Score
 ```python
 r_precisions = []
 pbar = tqdm(data_test.groupby(['playlist_pid']))
@@ -59,9 +61,5 @@ for pid, df in pbar:
 ```
 
 ## Results
-After prediction, we ranked the tracks by probabilities, and then we calculated the `r_precision` with the **ground truth** tracks which we reserved for training. On average, playlists have about 50 tracks, so 5 tracks will be reserved for the testing pipeline to calculate this `r_precision` metric. The task indeed is not an easy one: out of 26000 tracks (using 2000 playlists), can the algorithm rank the tracks by probability, such that the ground_truth tracks present in the test set (which the algorithm didn't see before) are ranked first? This is the question r_precision answers. Out of the first x songs (where x is the number of ground truth predictions), how many ground truth songs were present? 
-
-When using our model, our mean `r_precision` is about `0.12`. This means that out of 25 ground truth songs, 3 will be present in the top 25 predictions ranked by probability. We did some sanity checking to see how our model is doing compared to other Spotify RecSys Challenge participants, and we saw that the best model had an `r_precision` of `0.224656`. However we got `0.12` just based on 2000 playlists, and they got `0.224656` based on training on the whole MPD Dataset.
-
-After obtention of the `r_precision` metric for our system, we proceeded to test our model on a sample playlist built by John, our teammate. As mentioned before, this required us to re-run the whole training and testing pipeline (this is a major limitation of our model). The recommendations provided were quite reasonable, according to John.
+Our mean `r_precision` returns at about `0.12`. This means that out of 25 ground truth songs, 3 will be present in the top 25 predictions. We did some sanity checking to see how our model is doing compared to other Spotify RecSys Challenge participants and see that the best model had an `r_precision` of `0.224656`, where they used the entire dataset.  
 
