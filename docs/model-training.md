@@ -44,6 +44,8 @@ We do the feature extraction using a `FeatureUnion` class from sklearn, which co
 
 The vectorizer is fit on the training set, to obtain a big matrix of features, `X_train`. This `X_train` matrix contains about 106000 features when 2000 playlists are loaded, together with 241000 observations. We believe as more playlists are loaded, the observations to features ratio increases, which should make it easier for the algorithm to distinguish between positive and negative playlist+track concatenations after training.
 
+**ItemSelector is a helper function that FeatureUnion uses to bring all features together into a matrix.**
+
 ```python
 class ItemSelector(BaseEstimator, TransformerMixin):
     """For data grouped by feature, select subset of data at a provided key.
@@ -87,6 +89,9 @@ class ItemSelector(BaseEstimator, TransformerMixin):
     def get_feature_names(self):
         return [dataset.columns[self.key]]
 ```
+
+
+**Uniting the feature into a massive matrix that will hold quantitative features as well as categorical 'one hot encoded' features.**
 
 ```python
 # we need a custom pre-processor to extract correct field,
