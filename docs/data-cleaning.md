@@ -212,7 +212,9 @@ playlist_df.playlist_name = word_cleanup(playlist_df.playlist_name)
 ```
 
 **First 10 playlist names and descriptions before clean up**
-<img src="images/playlist_name_original.png" width="440">
+<br>
+<img src="images/playlist_name_original.png" width="300">
 
 **First 10 playlist names and descriptions after clean up**
-<img src="images/playlist_name_cleaned.png" width="440">
+<br>
+<img src="images/playlist_name_cleaned.png" width="300">
