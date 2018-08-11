@@ -34,7 +34,7 @@ X_test_2d = pca_transformer.transform(X_test)
 ```
 
 **Plot**
-*Credit to HW4 for lab for code template*
+*Credit to HW4 and lab for code template*
 ```python
 colors = ['b', 'r']
 label_text = ["Not Match", "Match"] 
