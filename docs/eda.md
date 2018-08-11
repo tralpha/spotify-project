@@ -92,15 +92,15 @@ We cleaned up the playlist names and descriptions as part of the [Data Cleaning]
 
 We now go one step further and we analyze the frequency of individual words in playlist names.
 
-**The top 100 words for playlist names seem to be categorical in nature**
+**The top 100 words for playlist names seem to be categorical in nature:**
 <br>
 <br>
 ![fig2](images/playlist_name_top_100_words.png)
 
-**The top 100 words for playlist descriptions are also categorical**
+**The top 100 words for playlist descriptions are also categorical:**
 <br>
 <br>
 ![fig3](images/playlist_description_top_100_words.png)
 
 ## Conclusions
-It looks like we will have some relevant features for making playlist recommendations.  Track_duration and the textual data shold prove helpful in discriminating between songs that do belong in a playlist and those that don't.  Using the words in the playlist name and the descriptions seems like a good proxy for the song meta-data and vectorization will be well worth our time.
+It looks like we will have some relevant features for making playlist recommendations.  Track_duration and the textual data should prove helpful in discriminating between songs that do belong in a playlist and those that don't.  Using the words in the playlist name and descriptions seems like a good proxy for the song meta-data.  Vectorization was well worth our time.
