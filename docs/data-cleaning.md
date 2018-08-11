@@ -211,7 +211,7 @@ playlist_df.playlist_description = word_cleanup(playlist_df.playlist_description
 playlist_df.playlist_name = word_cleanup(playlist_df.playlist_name)
 ```
 
-Only 1.9% of playlists have desceriptions so when listing the first 10 playlists none of them have descriptions<br>
+Only 1.9% of playlists have desceriptions so when listing the first 10 playlists all descriptions are empty.<br>
 
 **First 10 playlist names and descriptions before clean up**
 <br>
